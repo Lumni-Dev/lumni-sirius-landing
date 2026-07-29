@@ -387,9 +387,9 @@ a.btn {
   max-width: 100%;
   overflow-wrap: anywhere;
   /* No scale — overflow-x: clip turned the pulse into a square. */
-  opacity: calc(0.9 + var(--sirius-pulse) * 0.1);
-  text-shadow: 0 0 calc(14px + var(--sirius-pulse) * 16px)
-    rgba(255, 255, 255, calc(0.14 + var(--sirius-pulse) * 0.16));
+  opacity: calc(0.92 + var(--sirius-pulse) * 0.06);
+  text-shadow: 0 0 calc(6px + var(--sirius-pulse) * 8px)
+    rgba(255, 255, 255, calc(0.06 + var(--sirius-pulse) * 0.08));
 }
 
 .hero h1 {
