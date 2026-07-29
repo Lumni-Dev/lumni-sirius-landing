@@ -70,6 +70,8 @@
   let lastBurst = -10;
   let lookX = 0;
   let lookY = 0;
+  let canvasHalfW = 0;
+  let canvasHalfH = 0;
   const LARGE_MQ =
     typeof window.matchMedia === "function"
       ? window.matchMedia("(min-width: 960px)")
@@ -629,6 +631,17 @@
     return true;
   }
 
+  function placeCanvas() {
+    if (!canvas || !stage || !canvasHalfW || !canvasHalfH) return;
+    const rect = stage.getBoundingClientRect();
+    const stageCx = rect.left + rect.width / 2;
+    const stageCy = rect.top + rect.height / 2;
+    // Fixed to the viewport so overscan never expands document scroll height.
+    canvas.style.position = "fixed";
+    canvas.style.left = `${stageCx - canvasHalfW}px`;
+    canvas.style.top = `${stageCy - canvasHalfH}px`;
+  }
+
   function resize() {
     if (!renderer || !stage || !canvas || !camera) return;
     const w = stage.clientWidth || 1;
@@ -645,11 +658,12 @@
     const rw = Math.max(1, Math.ceil(halfW * 2));
     const rh = Math.max(1, Math.ceil(halfH * 2));
 
+    canvasHalfW = halfW;
+    canvasHalfH = halfH;
     renderer.setSize(rw, rh, false);
     canvas.style.width = `${rw}px`;
     canvas.style.height = `${rh}px`;
-    canvas.style.left = `${(w - rw) / 2}px`;
-    canvas.style.top = `${(h - rh) / 2}px`;
+    placeCanvas();
 
     // Afastar a câmera na proporção do overscan (mantém enquadramento do stage)
     // e ORB_FRAME aproxima um pouco para a estrela ficar maior.
@@ -673,6 +687,7 @@
       raf = null;
       return;
     }
+    placeCanvas();
     const t = clock.getElapsedTime();
     const dt = Math.min(0.05, t - lastT);
     lastT = t;

@@ -356,10 +356,11 @@ a.btn {
 }
 
 #orb-canvas {
-  position: absolute;
+  position: fixed;
   display: block;
   pointer-events: none;
-  /* width/height/left/top: set by orb.js overscan */
+  z-index: 1;
+  /* width/height/left/top: set by orb.js (viewport-fixed, no document scroll inflate) */
 }
 
 /* ---- hero ---- */
