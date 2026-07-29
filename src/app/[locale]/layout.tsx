@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { JetBrains_Mono, Orbitron, Space_Grotesk } from "next/font/google";
 
-import { InteractionLock } from "@/components/InteractionLock";
 import { EnsureScrollTop } from "@/components/EnsureScrollTop";
 import {
   getLocaleDefinition,
@@ -15,7 +14,7 @@ import { localeAlternates, ogAlternateLocales } from "@/i18n/metadata";
 import "@/app/globals.css";
 
 const space = Space_Grotesk({
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
   variable: "--font-sans",
   display: "swap",
 });
@@ -27,7 +26,7 @@ const orbitron = Orbitron({
 });
 
 const mono = JetBrains_Mono({
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext", "cyrillic"],
   variable: "--font-mono",
   display: "swap",
 });
@@ -92,7 +91,6 @@ export default async function LocaleLayout({
     >
       <body>
         <EnsureScrollTop />
-        <InteractionLock />
         {children}
       </body>
     </html>

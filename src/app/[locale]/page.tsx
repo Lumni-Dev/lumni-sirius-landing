@@ -156,7 +156,9 @@ export default async function HomePage({ params }: HomePageProps) {
             <div className="sky-band" aria-label={dict.providers.ariaList}>
               <div className="sky-track">
                 <ProviderRow pass="a" />
-                <ProviderRow pass="b" />
+                <span className="sky-track-dup" aria-hidden="true">
+                  <ProviderRow pass="b" />
+                </span>
               </div>
             </div>
 

@@ -29,6 +29,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 72px;
   overflow-x: clip;
 }
 
@@ -44,9 +45,24 @@ body {
   /* clip (não hidden): overflow-x:hidden força overflow-y:auto e corta a onda. */
   overflow-x: clip;
   overflow-y: visible;
-  -webkit-user-select: none;
-  user-select: none;
-  -webkit-touch-callout: none;
+}
+
+html[lang="ja"] body,
+html[lang="ko"] body,
+html[lang="zh"] body,
+html[lang="ar"] body {
+  font-family:
+    var(--font-sans),
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    "Noto Sans",
+    "Noto Sans Arabic",
+    "Hiragino Sans",
+    "Apple SD Gothic Neo",
+    "PingFang SC",
+    sans-serif;
+  letter-spacing: 0;
 }
 
 a {
@@ -163,7 +179,7 @@ a.btn {
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: #fff;
-  margin-right: -0.28em;
+  margin-inline-end: -0.28em;
   flex-shrink: 0;
   opacity: calc(0.88 + var(--sirius-pulse) * 0.12);
   text-shadow: 0 0 calc(8px + var(--sirius-pulse) * 10px)
@@ -380,7 +396,7 @@ a.btn {
   min-height: 0;
   width: 100%;
   height: min(90vh, calc(100svh - 56px));
-  margin-right: clamp(-24px, -3vw, 0px);
+  margin-inline-end: clamp(-24px, -3vw, 0px);
   background: transparent;
   border: 0;
   order: 2;
@@ -454,8 +470,7 @@ a.btn {
   margin: 0 auto;
   padding: clamp(56px, 10vw, 96px) 0;
   border-top: 1px solid var(--hairline);
-  content-visibility: auto;
-  contain-intrinsic-size: 1px 720px;
+  scroll-margin-top: 72px;
 }
 
 #features.section {
@@ -579,7 +594,7 @@ a.btn {
   padding: 0 14px;
   font-size: 13px;
   letter-spacing: 0.02em;
-  border-right: 1px solid var(--hairline);
+  border-inline-end: 1px solid var(--hairline);
   white-space: nowrap;
 }
 
@@ -612,7 +627,7 @@ a.btn {
   display: inline-block;
   width: 6px;
   height: 6px;
-  margin-right: 8px;
+  margin-inline-end: 8px;
   border-radius: 50%;
   vertical-align: 1px;
 }
@@ -680,7 +695,7 @@ a.btn {
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: #fff;
-  padding-left: 0.22em;
+  padding-inline-start: 0.22em;
   margin-bottom: 14px;
   opacity: calc(0.9 + var(--sirius-pulse) * 0.1);
   text-shadow: 0 0 calc(12px + var(--sirius-pulse) * 14px)
@@ -906,6 +921,28 @@ a.btn {
     text-shadow: 0 0 18px rgba(255, 255, 255, 0.2) !important;
   }
 
+  .section-sky,
+  .sky-band {
+    overflow: visible;
+  }
+
+  .sky-band {
+    mask-image: none;
+  }
+
+  .sky-track {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    gap: 0;
+  }
+
+  .sky-track-dup {
+    display: none;
+  }
+
   html {
     scroll-behavior: auto;
   }
@@ -928,8 +965,8 @@ a.btn {
     width: 100%;
     height: min(58vh, 480px);
     min-height: 300px;
-    margin-right: 0;
-    margin-left: 0;
+    margin-inline-end: 0;
+    margin-inline-start: 0;
   }
 
   .hero-copy {
@@ -949,8 +986,7 @@ a.btn {
   .hero-lead {
     max-width: none;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
   }
 
   .hero-cta {

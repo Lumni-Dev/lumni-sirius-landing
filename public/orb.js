@@ -72,9 +72,14 @@
   let lookY = 0;
   let canvasHalfW = 0;
   let canvasHalfH = 0;
+  let resizeTimers = [];
   const LARGE_MQ =
     typeof window.matchMedia === "function"
       ? window.matchMedia("(min-width: 960px)")
+      : null;
+  const REDUCE_MQ =
+    typeof window.matchMedia === "function"
+      ? window.matchMedia("(prefers-reduced-motion: reduce)")
       : null;
   const RIBBON_N = 360;
   const RIBBON_A = 1.85; // "raio" da lemniscata (maior que a estrela)
@@ -603,7 +608,13 @@
     canvas = document.getElementById("orb-canvas");
     stage = document.getElementById("stage");
     if (!canvas || !stage) return false;
-    renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+    try {
+      renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+    } catch (err) {
+      console.warn("[SiriusOrb] WebGL unavailable", err);
+      renderer = null;
+      return false;
+    }
     renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.75));
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera(BASE_FOV, 1, 0.1, 200);
@@ -634,14 +645,16 @@
 
   function placeCanvas() {
     if (!canvas || !stage || !canvasHalfW || !canvasHalfH) return;
-    const w = stage.clientWidth || 1;
-    const h = stage.clientHeight || 1;
+    const rect = stage.getBoundingClientRect();
     const rw = Math.max(1, Math.ceil(canvasHalfW * 2));
     const rh = Math.max(1, Math.ceil(canvasHalfH * 2));
-    // Absolute inside #stage — fixed broke under hero transform/animation.
-    canvas.style.position = "absolute";
-    canvas.style.left = `${(w - rw) / 2}px`;
-    canvas.style.top = `${(h - rh) / 2}px`;
+    // Fixed: overscan no longer expands document scrollHeight.
+    // Hero uses opacity-only animation, so fixed is safe again.
+    const left = rect.left + rect.width / 2 - rw / 2;
+    const top = rect.top + rect.height / 2 - rh / 2;
+    canvas.style.position = "fixed";
+    canvas.style.left = `${left}px`;
+    canvas.style.top = `${top}px`;
   }
 
   function resize() {
@@ -691,7 +704,7 @@
     }
     placeCanvas();
     const t = clock.getElapsedTime();
-    const dt = Math.min(0.05, t - lastT);
+    const dt = Math.min(0.05, Math.max(0, t - lastT));
     lastT = t;
     shared.uTime.value = t;
 
@@ -745,7 +758,7 @@
     lookY += (targetY - lookY) * 0.16;
     camera.position.x = Math.sin(t * 0.05) * 0.22 + lookX * 0.95;
     camera.position.y = Math.cos(t * 0.041) * 0.16 - lookY * 0.72;
-    camera.lookAt(0, 0, 0);
+    camera.lookAt(CENTER);
     if (starfield) starfield.rotation.y = t * 0.006 + lookX * 0.1;
 
     // Aura central: brilho base sempre presente (respiração lenta) que se
@@ -969,7 +982,15 @@
     raf = requestAnimationFrame(frame);
   }
 
+  function clearResizeTimers() {
+    for (let i = 0; i < resizeTimers.length; i += 1) {
+      clearTimeout(resizeTimers[i]);
+    }
+    resizeTimers = [];
+  }
+
   function start() {
+    if (REDUCE_MQ && REDUCE_MQ.matches) return;
     const nextCanvas = document.getElementById("orb-canvas");
     const nextStage = document.getElementById("stage");
     if (!nextCanvas || !nextStage) return;
@@ -987,15 +1008,18 @@
     if (!running) {
       running = true;
       clock.start();
+      lastT = 0;
       frame();
     }
-    setTimeout(resize, 120);
-    setTimeout(resize, 350);
-    setTimeout(resize, 700);
+    clearResizeTimers();
+    resizeTimers.push(setTimeout(resize, 120));
+    resizeTimers.push(setTimeout(resize, 350));
+    resizeTimers.push(setTimeout(resize, 700));
   }
 
   function stop() {
     running = false;
+    clearResizeTimers();
     if (raf) {
       cancelAnimationFrame(raf);
       raf = null;
