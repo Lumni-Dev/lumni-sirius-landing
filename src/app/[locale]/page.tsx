@@ -2,32 +2,35 @@ import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { SiriusOrb } from "@/components/SiriusOrb";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Starfield } from "@/components/Starfield";
+import { TopLink } from "@/components/TopLink";
 import { toLocaleCode } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 
 const PROVIDERS = [
   { name: "Claude", status: "active" },
   { name: "GPT", status: "active" },
-  { name: "Codex", status: "soon" },
+  { name: "Codex", status: "active" },
   { name: "Gemini", status: "active" },
-  { name: "Qwen", status: "soon" },
-  { name: "Grok", status: "soon" },
+  { name: "Qwen", status: "active" },
+  { name: "Grok", status: "active" },
   { name: "DeepSeek", status: "active" },
-  { name: "Mistral", status: "soon" },
-  { name: "Cohere", status: "soon" },
-  { name: "Perplexity", status: "soon" },
-  { name: "Together", status: "soon" },
-  { name: "Fireworks", status: "soon" },
-  { name: "Groq", status: "soon" },
-  { name: "OpenRouter", status: "soon" },
-  { name: "Llama", status: "soon" },
-  { name: "Kimi", status: "soon" },
-  { name: "Yi", status: "soon" },
-  { name: "Phi", status: "soon" },
-  { name: "Ollama", status: "soon" },
-  { name: "LM Studio", status: "soon" },
-  { name: "vLLM", status: "soon" },
-  { name: "llama.cpp", status: "soon" },
+  { name: "Mistral", status: "active" },
+  { name: "Cohere", status: "active" },
+  { name: "Perplexity", status: "active" },
+  { name: "Together", status: "active" },
+  { name: "Fireworks", status: "active" },
+  { name: "Groq", status: "active" },
+  { name: "OpenRouter", status: "active" },
+  { name: "Llama", status: "active" },
+  { name: "Kimi", status: "active" },
+  { name: "Yi", status: "active" },
+  { name: "Phi", status: "active" },
+  { name: "Ollama", status: "active" },
+  { name: "LM Studio", status: "active" },
+  { name: "vLLM", status: "active" },
+  { name: "llama.cpp", status: "active" },
+  { name: "Sirius Minor", status: "soon" },
+  { name: "Sirius Major", status: "soon" },
 ] as const;
 
 function ProviderRow({ pass }: { pass: string }) {
@@ -62,11 +65,10 @@ export default async function HomePage({ params }: HomePageProps) {
       </div>
 
       <div className="page">
+        <div id="top" aria-hidden="true" />
         <header className="nav">
           <div className="nav-inner">
-            <a className="brand" href="#top">
-              Sirius
-            </a>
+            <TopLink className="brand">Sirius</TopLink>
             <div className="nav-end">
               <nav aria-label={dict.nav.ariaPrimary}>
                 <ul className="nav-links">
@@ -91,7 +93,7 @@ export default async function HomePage({ params }: HomePageProps) {
           </div>
         </header>
 
-        <main id="top">
+        <main>
           <section className="hero" aria-labelledby="hero-brand">
             <div className="hero-orb">
               <SiriusOrb />

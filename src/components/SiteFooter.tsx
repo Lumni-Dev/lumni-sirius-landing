@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { TopLink } from "@/components/TopLink";
 import { toLocaleCode, type LocaleCode } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 
@@ -130,7 +131,7 @@ export function SiteFooter({ locale }: SiteFooterProps) {
             <a href={dict.footer.termsHref} target="_blank" rel="noreferrer">
               {dict.footer.terms}
             </a>
-            <a href="#top">{dict.footer.backToTop}</a>
+            <TopLink>{dict.footer.backToTop}</TopLink>
           </nav>
         </div>
       </div>
