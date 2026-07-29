@@ -68,6 +68,12 @@
   let meteorGeo = null;
   let embers = null; // fagulhas lançadas nos picos da fala
   let lastBurst = -10;
+  let lookX = 0;
+  let lookY = 0;
+  const LARGE_MQ =
+    typeof window.matchMedia === "function"
+      ? window.matchMedia("(min-width: 960px)")
+      : null;
   const RIBBON_N = 360;
   const RIBBON_A = 1.85; // "raio" da lemniscata (maior que a estrela)
   const METEOR_N = 2;
@@ -706,11 +712,24 @@
       );
     }
 
-    // Câmera flutua de leve (drift cinematográfico) — dá paralaxe e vida.
-    camera.position.x = Math.sin(t * 0.05) * 0.22;
-    camera.position.y = Math.cos(t * 0.041) * 0.16;
+    // Câmera flutua de leve + segue o mouse (paralaxe do céu em telas grandes).
+    let targetX = 0;
+    let targetY = 0;
+    if (typeof document !== "undefined") {
+      const root = document.documentElement;
+      const px = parseFloat(root.style.getPropertyValue("--sky-px") || "0");
+      const py = parseFloat(root.style.getPropertyValue("--sky-py") || "0");
+      if (LARGE_MQ && LARGE_MQ.matches && Number.isFinite(px) && Number.isFinite(py)) {
+        targetX = px;
+        targetY = py;
+      }
+    }
+    lookX += (targetX - lookX) * 0.08;
+    lookY += (targetY - lookY) * 0.08;
+    camera.position.x = Math.sin(t * 0.05) * 0.22 + lookX * 0.42;
+    camera.position.y = Math.cos(t * 0.041) * 0.16 - lookY * 0.32;
     camera.lookAt(0, 0, 0);
-    if (starfield) starfield.rotation.y = t * 0.006;
+    if (starfield) starfield.rotation.y = t * 0.006 + lookX * 0.04;
 
     // Aura central: brilho base sempre presente (respiração lenta) que se
     // intensifica com a fala.

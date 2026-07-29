@@ -16,6 +16,9 @@
   /* Driven by orb.js — same breath phase as the star (sin(t * 1.3)). */
   --sirius-pulse: 0.5;
   --sirius-energy: 0.35;
+  /* Sky mouse look (−1…1), set by Starfield on large screens. */
+  --sky-px: 0;
+  --sky-py: 0;
 }
 
 * {
@@ -75,9 +78,10 @@ a.btn {
 
 .backdrop canvas {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  inset: -4%;
+  width: 108%;
+  height: 108%;
+  transform-origin: 50% 45%;
 }
 
 .haze {
@@ -88,6 +92,26 @@ a.btn {
     radial-gradient(ellipse 50% 35% at 18% 70%, rgba(28, 28, 34, 0.55), transparent 70%);
   filter: blur(48px);
   animation: haze-drift 28s ease-in-out infinite alternate;
+  transform-origin: 50% 40%;
+  will-change: transform;
+}
+
+@media (min-width: 960px) {
+  .backdrop canvas {
+    transform: perspective(1400px) rotateY(calc(var(--sky-px) * -5deg))
+      rotateX(calc(var(--sky-py) * 3.5deg))
+      translate3d(calc(var(--sky-px) * -18px), calc(var(--sky-py) * -12px), 0);
+  }
+
+  .haze {
+    animation: none;
+    transform: translate3d(
+        calc(var(--sky-px) * -36px),
+        calc(var(--sky-py) * -22px),
+        0
+      )
+      scale(1.06);
+  }
 }
 
 .veil {
@@ -851,6 +875,11 @@ a.btn {
   .sky-track,
   .haze {
     animation: none !important;
+  }
+
+  .backdrop canvas,
+  .haze {
+    transform: none !important;
   }
 
   .brand,

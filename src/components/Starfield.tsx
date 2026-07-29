@@ -13,6 +13,8 @@ type Star = {
   cool: boolean;
 };
 
+const LARGE_MQ = "(min-width: 960px)";
+
 export function Starfield() {
   const ref = useRef<HTMLCanvasElement>(null);
 
@@ -25,6 +27,10 @@ export function Starfield() {
     const reduced =
       typeof window.matchMedia === "function" &&
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const largeMq =
+      typeof window.matchMedia === "function"
+        ? window.matchMedia(LARGE_MQ)
+        : null;
 
     let stars: Star[] = [];
     let w = 0;
@@ -33,6 +39,8 @@ export function Starfield() {
     let running = true;
     let last = performance.now();
     const drift = { x: 0, y: 0, vx: 0.1, vy: 0.06 };
+    // Mouse look: target + smoothed, for depth parallax on large screens.
+    const look = { x: 0, y: 0, tx: 0, ty: 0 };
 
     const spawn = (depth: number, x: number, y: number): Star => ({
       x,
@@ -90,6 +98,16 @@ export function Starfield() {
         ...place(Math.max(5, Math.floor(area / (70000 * density))), 0.5, 0.72, 0.09, placed),
         ...place(Math.max(3, Math.floor(area / (120000 * density))), 0.72, 1, 0.12, placed),
       ];
+      if (!largeMq?.matches) {
+        look.tx = 0;
+        look.ty = 0;
+      }
+    };
+
+    const syncSkyVars = () => {
+      const root = document.documentElement;
+      root.style.setProperty("--sky-px", look.x.toFixed(4));
+      root.style.setProperty("--sky-py", look.y.toFixed(4));
     };
 
     const frame = (now: number) => {
@@ -108,12 +126,20 @@ export function Starfield() {
       if (!reduced) {
         drift.x += drift.vx * dt;
         drift.y += drift.vy * dt;
+        look.x += (look.tx - look.x) * Math.min(1, 6 * dt);
+        look.y += (look.ty - look.y) * Math.min(1, 6 * dt);
+        syncSkyVars();
       }
       ctx.clearRect(0, 0, w, h);
 
       for (const st of stars) {
         const x = ((st.x + drift.x * (0.04 + st.z * 0.08)) % 1 + 1) % 1;
         const y = ((st.y + drift.y * (0.03 + st.z * 0.06)) % 1 + 1) % 1;
+        // Near stars (higher z) shift more — sky depth when looking around.
+        const px = look.x * (10 + st.z * 36);
+        const py = look.y * (8 + st.z * 26);
+        const sx = x * w + px;
+        const sy = y * h + py;
         const wave = 0.5 + 0.5 * Math.sin(now * 0.001 * st.speed + st.phase);
         const breath = 1 - st.twinkle + st.twinkle * wave;
         const alpha = (0.25 + st.z * 0.7) * breath;
@@ -122,10 +148,10 @@ export function Starfield() {
           ? `rgba(190, 205, 255, ${alpha})`
           : `rgba(245, 246, 250, ${alpha})`;
         if (r < 0.7) {
-          ctx.fillRect(x * w, y * h, r * 1.6, r * 1.6);
+          ctx.fillRect(sx, sy, r * 1.6, r * 1.6);
         } else {
           ctx.beginPath();
-          ctx.arc(x * w, y * h, r, 0, Math.PI * 2);
+          ctx.arc(sx, sy, r, 0, Math.PI * 2);
           ctx.fill();
         }
       }
@@ -143,11 +169,30 @@ export function Starfield() {
         raf = requestAnimationFrame(frame);
       }
     };
+    const onPointerMove = (event: PointerEvent) => {
+      if (reduced || !largeMq?.matches || w <= 0 || h <= 0) return;
+      look.tx = (event.clientX / w) * 2 - 1;
+      look.ty = (event.clientY / h) * 2 - 1;
+    };
+    const onPointerLeave = () => {
+      look.tx = 0;
+      look.ty = 0;
+    };
+    const onMqChange = () => {
+      if (!largeMq?.matches) {
+        look.tx = 0;
+        look.ty = 0;
+      }
+    };
 
     resize();
+    syncSkyVars();
     raf = requestAnimationFrame(frame);
     window.addEventListener("resize", onResize, { passive: true });
     document.addEventListener("visibilitychange", onVisibility);
+    window.addEventListener("pointermove", onPointerMove, { passive: true });
+    document.documentElement.addEventListener("pointerleave", onPointerLeave);
+    largeMq?.addEventListener?.("change", onMqChange);
 
     return () => {
       running = false;
@@ -155,6 +200,11 @@ export function Starfield() {
       window.clearTimeout(resizeTimer);
       window.removeEventListener("resize", onResize);
       document.removeEventListener("visibilitychange", onVisibility);
+      window.removeEventListener("pointermove", onPointerMove);
+      document.documentElement.removeEventListener("pointerleave", onPointerLeave);
+      largeMq?.removeEventListener?.("change", onMqChange);
+      document.documentElement.style.removeProperty("--sky-px");
+      document.documentElement.style.removeProperty("--sky-py");
     };
   }, []);
 
