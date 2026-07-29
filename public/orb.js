@@ -54,7 +54,7 @@
   const BASE_CAM_Z = 7.6;
   const BASE_FOV = 40;
   /** < 1 aproxima a câmera no recorte do stage (estrela um pouco maior). */
-  const ORB_FRAME = 0.9;
+  const ORB_FRAME = 0.82;
 
   // Camadas "mágicas" extras: céu profundo, fita de luz, raios de difração,
   // estrelas cadentes e brasas de fala.
