@@ -412,9 +412,12 @@ a.btn {
   max-width: 100%;
   overflow-wrap: anywhere;
   /* No scale — overflow-x: clip turned the pulse into a square. */
-  opacity: calc(0.92 + var(--sirius-pulse) * 0.06);
-  text-shadow: 0 0 calc(6px + var(--sirius-pulse) * 8px)
-    rgba(255, 255, 255, calc(0.06 + var(--sirius-pulse) * 0.08));
+  opacity: calc(0.9 + var(--sirius-pulse) * 0.1);
+  text-shadow:
+    0 0 calc(12px + var(--sirius-pulse) * 18px)
+      rgba(255, 255, 255, calc(0.16 + var(--sirius-pulse) * 0.18)),
+    0 0 calc(28px + var(--sirius-pulse) * 24px)
+      rgba(255, 255, 255, calc(0.06 + var(--sirius-pulse) * 0.08));
 }
 
 .hero h1 {
@@ -453,6 +456,10 @@ a.btn {
   border-top: 1px solid var(--hairline);
   content-visibility: auto;
   contain-intrinsic-size: 1px 720px;
+}
+
+#features.section {
+  border-top: none;
 }
 
 .section-head {

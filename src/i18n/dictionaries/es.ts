@@ -4,7 +4,7 @@ const es: Dictionary = {
   meta: {
     title: "Sirius - Tu agente de IA local para Windows",
     description:
-      "Sirius es un agente de IA de escritorio que se ejecuta en tu PC con tus propias claves de API. Código, skills, voz, correo y más bajo un cielo estrellado.",
+      "Sirius es un agente de IA de escritorio que se ejecuta en tu PC con tus propias claves de API. Código, skills, voz, correo y más — local y bajo tu control.",
   },
   nav: {
     features: "Funciones",
@@ -17,14 +17,14 @@ const es: Dictionary = {
   hero: {
     brand: "Sirius",
     title: "Tu agente de IA local",
-    titleMuted: " bajo un cielo tranquilo.",
+    titleMuted: " para Windows.",
     lead: "Un agente de escritorio para Windows que programa, habla y organiza con herramientas nativas y tus propias claves de API.",
     ctaPrimary: "Próximamente",
-    ctaSecondary: "Explorar la noche",
+    ctaSecondary: "Ver capacidades",
   },
   features: {
     kicker: "Capacidades",
-    title: "Lo que la estrella trae a tu escritorio.",
+    title: "Lo que Sirius trae a tu escritorio.",
     lead: "Una sola composición para el trabajo: chat, herramientas e integraciones, sin convertir tu escritorio en un collage de paneles.",
     items: [
       {
@@ -66,9 +66,9 @@ const es: Dictionary = {
     ],
   },
   providers: {
-    kicker: "Constelación",
-    title: "Cada proveedor en el mapa.",
-    lead: "Los backends en vivo brillan ahora. El resto espera como slots Soon, listos cuando llegue su SDK o CLI nativo.",
+    kicker: "Proveedores",
+    title: "Cada proveedor en un solo lugar.",
+    lead: "Los backends en vivo ya están listos. El resto espera como slots Soon, listos cuando llegue su SDK o CLI nativo.",
     ariaList: "Proveedores de IA",
     live: "En vivo",
     soon: "Soon",
@@ -83,20 +83,20 @@ const es: Dictionary = {
         body: "Las claves de API viven en el keyring del SO. El modelo se ejecuta localmente mediante SDKs y CLIs nativos.",
       },
       {
-        kicker: "02 · Force",
+        kicker: "02 · Esfuerzo",
         title: "Gasta solo lo necesario",
         body: "El esfuerzo, los permisos y el enrutamiento Auto eligen el camino más barato que aún termina el trabajo.",
       },
       {
-        kicker: "03 · Cielo",
-        title: "Un lugar tranquilo para trabajar",
-        body: "Starfield, orb y Space Grotesk. El escritorio se abre como la noche, no como un dashboard abarrotado.",
+        kicker: "03 · Foco",
+        title: "Un lugar calmado para trabajar",
+        body: "Interfaz limpia con Space Grotesk. El escritorio se mantiene enfocado, no como un dashboard abarrotado.",
       },
     ],
   },
   cta: {
     brand: "Sirius",
-    lead: "Instala en Windows. Pega tu clave. Pide ayuda bajo la Force.",
+    lead: "Instala en Windows. Pega tu clave. Pide ayuda.",
     button: "Próximamente",
     mailSubject: "Descarga de Sirius",
   },

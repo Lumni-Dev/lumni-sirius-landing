@@ -4,7 +4,7 @@ const nl: Dictionary = {
   meta: {
     title: "Sirius - Jouw lokale AI-agent voor Windows",
     description:
-      "Sirius is een desktop-AI-agent die op je pc draait met je eigen API-sleutels. Code, skills, stem, e-mail en meer onder een stille sterrenhemel.",
+      "Sirius is een desktop-AI-agent die op je pc draait met je eigen API-sleutels. Code, skills, stem, e-mail en meer — lokaal en onder jouw controle.",
   },
   nav: {
     features: "Functies",
@@ -17,14 +17,14 @@ const nl: Dictionary = {
   hero: {
     brand: "Sirius",
     title: "Jouw lokale AI-agent",
-    titleMuted: " onder een stille hemel.",
+    titleMuted: "  voor Windows.",
     lead: "Een Windows-desktopagent die codeert, spreekt en organiseert met native tools en je eigen API-sleutels.",
     ctaPrimary: "Binnenkort",
-    ctaSecondary: "Verken de nacht",
+    ctaSecondary: "Bekijk mogelijkheden",
   },
   features: {
     kicker: "Mogelijkheden",
-    title: "Wat de ster naar je bureau brengt.",
+    title: "Wat Sirius naar je bureau brengt.",
     lead: "Eén compositie voor werk: chat, tools en integraties, zonder je desktop in een dashboard-collage te veranderen.",
     items: [
       {
@@ -66,8 +66,8 @@ const nl: Dictionary = {
     ],
   },
   providers: {
-    kicker: "Constellatie",
-    title: "Elke provider op de kaart.",
+    kicker: "Providers",
+    title: "Elke provider op één plek.",
     lead: "Live backends schijnen nu. De rest wacht als Soon-slots, klaar wanneer hun native SDK of CLI landt.",
     ariaList: "AI-providers",
     live: "Live",
@@ -83,20 +83,20 @@ const nl: Dictionary = {
         body: "API-sleutels leven in de OS-keyring. Het model draait lokaal via native SDK’s en CLI’s.",
       },
       {
-        kicker: "02 · Force",
+        kicker: "02 · Inspanning",
         title: "Besteed alleen wat nodig is",
         body: "Inspanning, rechten en Auto-routing kiezen het goedkoopste pad dat de klus nog klaart.",
       },
       {
-        kicker: "03 · Hemel",
+        kicker: "03 · Focus",
         title: "Een stille plek om te werken",
-        body: "Starfield, orb en Space Grotesk. De desktop opent als de nacht, niet als een vol dashboard.",
+        body: "Strakke interface met Space Grotesk. De desktop blijft gefocust, geen vol dashboard.",
       },
     ],
   },
   cta: {
     brand: "Sirius",
-    lead: "Installeer op Windows. Plak je sleutel. Vraag hulp onder de Force.",
+    lead: "Installeer op Windows. Plak je sleutel. Vraag om hulp.",
     button: "Binnenkort",
     mailSubject: "Sirius-download",
   },

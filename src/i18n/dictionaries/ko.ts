@@ -17,14 +17,14 @@ const ko: Dictionary = {
   hero: {
     brand: "Sirius",
     title: "당신의 로컬 AI 에이전트",
-    titleMuted: ", 고요한 하늘 아래에서.",
+    titleMuted: " (Windows용).",
     lead: "네이티브 도구와 본인 API 키로 코딩하고, 말하고, 정리하는 Windows 데스크톱 에이전트.",
     ctaPrimary: "곧 공개",
-    ctaSecondary: "밤을 탐험하기",
+    ctaSecondary: "기능 보기",
   },
   features: {
     kicker: "역량",
-    title: "별이 책상 위로 가져오는 것.",
+    title: "Sirius가 책상 위로 가져오는 것.",
     lead: "업무를 위한 하나의 구성: 채팅, 도구, 통합. 데스크톱을 대시보드 콜라주로 만들지 않습니다.",
     items: [
       {
@@ -67,7 +67,7 @@ const ko: Dictionary = {
   },
   providers: {
     kicker: "별자리",
-    title: "지도 위 모든 프로바이더.",
+    title: "모든 프로바이더를 한곳에.",
     lead: "라이브 백엔드는 이미 빛납니다. 나머지는 Soon 슬롯으로 대기하며, 네이티브 SDK나 CLI가 도착하면 준비됩니다.",
     ariaList: "AI 프로바이더",
     live: "라이브",
@@ -83,12 +83,12 @@ const ko: Dictionary = {
         body: "API 키는 OS 키링에 보관됩니다. 모델은 네이티브 SDK와 CLI로 로컬에서 실행됩니다.",
       },
       {
-        kicker: "02 · Force",
+        kicker: "02 · 노력",
         title: "필요한 만큼만 쓰기",
         body: "노력, 권한, Auto 라우팅이 일을 끝내면서도 가장 저렴한 경로를 고릅니다.",
       },
       {
-        kicker: "03 · 하늘",
+        kicker: "03 · 포커스",
         title: "고요히 일할 수 있는 곳",
         body: "Starfield, orb, Space Grotesk. 데스크톱은 붐비는 대시보드가 아니라 밤처럼 열립니다.",
       },

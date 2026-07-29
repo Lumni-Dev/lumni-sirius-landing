@@ -4,7 +4,7 @@ const en: Dictionary = {
   meta: {
     title: "Sirius - Your local AI agent for Windows",
     description:
-      "Sirius is a desktop AI agent that runs on your PC with your own API keys. Code, skills, voice, email, and more under a quiet starfield.",
+      "Sirius is a desktop AI agent that runs on your PC with your own API keys. Code, skills, voice, email, and more — local and under your control.",
   },
   nav: {
     features: "Features",
@@ -17,14 +17,14 @@ const en: Dictionary = {
   hero: {
     brand: "Sirius",
     title: "Your local AI agent",
-    titleMuted: " under a quiet sky.",
+    titleMuted: " for Windows.",
     lead: "A Windows desktop agent that codes, speaks, and organizes with native tools and your own API keys.",
     ctaPrimary: "Coming soon",
-    ctaSecondary: "Explore the night",
+    ctaSecondary: "See capabilities",
   },
   features: {
     kicker: "Capabilities",
-    title: "What the star brings to your desk.",
+    title: "What Sirius brings to your desk.",
     lead: "One composition for work: chat, tools, and integrations, without turning your desktop into a dashboard collage.",
     items: [
       {
@@ -61,14 +61,14 @@ const en: Dictionary = {
         n: "06",
         label: "Control",
         title: "Effort, permissions, Auto",
-        body: "Pick force and permission per turn, or leave Auto to choose the cheapest model that still performs.",
+        body: "Pick effort and permission per turn, or leave Auto to choose the cheapest model that still performs.",
       },
     ],
   },
   providers: {
-    kicker: "Constellation",
-    title: "Every provider on the map.",
-    lead: "Live backends shine now. The rest wait as Soon slots, ready when their native SDK or CLI lands.",
+    kicker: "Providers",
+    title: "Every provider in one place.",
+    lead: "Live backends are ready now. The rest wait as Soon slots, available when their native SDK or CLI lands.",
     ariaList: "AI providers",
     live: "Live",
     soon: "Soon",
@@ -83,20 +83,20 @@ const en: Dictionary = {
         body: "API keys live in the OS keyring. The model runs locally through native SDKs and CLIs.",
       },
       {
-        kicker: "02 · Force",
+        kicker: "02 · Effort",
         title: "Spend only what you need",
         body: "Effort, permissions, and Auto routing pick the cheapest path that still gets the job done.",
       },
       {
-        kicker: "03 · Sky",
-        title: "A quiet place to work",
-        body: "Starfield, orb, and Space Grotesk. The desktop opens like night, not a crowded dashboard.",
+        kicker: "03 · Focus",
+        title: "A calm place to work",
+        body: "A clean interface with Space Grotesk. The desktop stays focused, not a crowded dashboard.",
       },
     ],
   },
   cta: {
     brand: "Sirius",
-    lead: "Install on Windows. Paste your key. Ask for help under the Force.",
+    lead: "Install on Windows. Paste your key. Ask for help.",
     button: "Coming soon",
     mailSubject: "Sirius download",
   },

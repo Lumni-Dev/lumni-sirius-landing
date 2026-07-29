@@ -145,10 +145,10 @@
     c.height = 256;
     const ctx = c.getContext("2d");
     const g = ctx.createRadialGradient(128, 128, 0, 128, 128, 128);
-    g.addColorStop(0.0, "rgba(255,255,255,0.85)");
-    g.addColorStop(0.12, "rgba(255,255,255,0.4)");
-    g.addColorStop(0.28, "rgba(255,255,255,0.16)");
-    g.addColorStop(0.6, "rgba(255,255,255,0.05)");
+    g.addColorStop(0.0, "rgba(255,255,255,1)");
+    g.addColorStop(0.12, "rgba(255,255,255,0.65)");
+    g.addColorStop(0.28, "rgba(255,255,255,0.3)");
+    g.addColorStop(0.6, "rgba(255,255,255,0.09)");
     g.addColorStop(1.0, "rgba(255,255,255,0)");
     ctx.fillStyle = g;
     ctx.fillRect(0, 0, 256, 256);
@@ -175,8 +175,8 @@
       ctx.fillRect(-256, -256, 512, 512);
       ctx.restore();
     };
-    ray(0, 1.0, 0.04, 0.55);
-    ray(Math.PI / 2, 1.0, 0.04, 0.55);
+    ray(0, 1.0, 0.045, 0.9);
+    ray(Math.PI / 2, 1.0, 0.045, 0.9);
     return new THREE.CanvasTexture(c);
   }
 
@@ -452,8 +452,8 @@
   }
 
   function buildScene() {
-    mainMat = makeStarMaterial(18.0, 0.1);
-    const mainGeo = makeStarGeometry(1.05, 0.38, 2000, 620, 360, 0.035);
+    mainMat = makeStarMaterial(20.0, 0.12);
+    const mainGeo = makeStarGeometry(0.92, 0.34, 2600, 800, 500, 0.035);
     mainGroup = new THREE.Group();
     mainGroup.position.copy(CENTER);
     mainGroup.add(new THREE.Points(mainGeo, mainMat));
@@ -472,7 +472,7 @@
         map: glowTexture(),
         color: 0xffffff,
         transparent: true,
-        opacity: 0.35,
+        opacity: 0.6,
         blending: THREE.AdditiveBlending,
         depthWrite: false,
         depthTest: false,
@@ -551,14 +551,14 @@
         map: glowTexture(),
         color: 0xffffff,
         transparent: true,
-        opacity: 0.32,
+        opacity: 0.6,
         blending: THREE.AdditiveBlending,
         depthWrite: false,
         depthTest: false,
       }),
     );
     coreGlow.position.copy(CENTER);
-    coreGlow.scale.set(0.85, 0.85, 1);
+    coreGlow.scale.set(1.05, 1.05, 1);
     scene.add(coreGlow);
 
     // Raios de difração: cruz principal + cruz diagonal menor, cada uma
@@ -569,7 +569,7 @@
         map: rayTex,
         color: 0xffffff,
         transparent: true,
-        opacity: 0.16,
+        opacity: 0.3,
         blending: THREE.AdditiveBlending,
         depthWrite: false,
         depthTest: false,
@@ -582,7 +582,7 @@
         map: rayTex,
         color: 0xffffff,
         transparent: true,
-        opacity: 0.08,
+        opacity: 0.16,
         rotation: Math.PI / 4,
         blending: THREE.AdditiveBlending,
         depthWrite: false,
@@ -748,11 +748,12 @@
     if (starfield) starfield.rotation.y = t * 0.006 + lookX * 0.1;
 
     // Aura central: brilho base sempre presente (respiração lenta) que se
-    // intensifica com a fala.
+    // intensifica com a fala — mesmos valores do sirius-app.
     if (glow) {
-      const gs = 1.55 + audioSmooth * 0.7 + breath * 0.12;
+      const gs = 2.8 + audioSmooth * 3.6;
       glow.scale.set(gs, gs, 1);
-      const gop = 0.07 + breath * 0.035 + audioSmooth * 0.12;
+      const shine = 0.5 + 0.5 * Math.sin(t * 1.3);
+      const gop = 0.26 + shine * 0.1 + audioSmooth * 0.6;
       glow.material.opacity = gop;
       glow.visible = gop > 0.002;
     }
@@ -760,18 +761,18 @@
     // Núcleo + raios de difração: cintilam rápido e sutil (como uma estrela
     // de verdade tremula no céu) e se abrem quando o Sirius fala.
     if (raysA) {
-      const flick = 0.9 + 0.05 * Math.sin(t * 4.2) + 0.03 * Math.sin(t * 7.1 + 1.7);
-      const rs = 2.7 + audioSmooth * 0.7 + Math.sin(t * 0.35) * 0.08;
+      const flick = 0.82 + 0.1 * Math.sin(t * 6.7) + 0.08 * Math.sin(t * 11.3 + 1.7);
+      const rs = 3.6 + audioSmooth * 2.6 + Math.sin(t * 1.3) * 0.18;
       raysA.scale.set(rs, rs, 1);
       raysA.material.rotation = Math.sin(t * 0.21) * 0.16;
-      raysA.material.opacity = (0.11 + audioSmooth * 0.12) * flick;
+      raysA.material.opacity = (0.3 + audioSmooth * 0.55) * flick;
       const rs2 = rs * 0.62;
       raysB.scale.set(rs2, rs2, 1);
       raysB.material.rotation = Math.PI / 4 - Math.sin(t * 0.17 + 2.0) * 0.22;
-      raysB.material.opacity = (0.055 + audioSmooth * 0.08) * flick;
-      const cs = 0.82 + audioSmooth * 0.18;
+      raysB.material.opacity = (0.16 + audioSmooth * 0.4) * flick;
+      const cs = 1.05 + audioSmooth * 0.7;
       coreGlow.scale.set(cs, cs, 1);
-      coreGlow.material.opacity = 0.22 + 0.05 * Math.sin(t * 0.35) + audioSmooth * 0.1;
+      coreGlow.material.opacity = 0.5 + 0.2 * Math.sin(t * 1.3) + audioSmooth * 0.35;
     }
 
     const a = t * ORBIT_SPEED;
