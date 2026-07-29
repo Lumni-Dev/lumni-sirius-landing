@@ -2,7 +2,7 @@
 
 const en: Dictionary = {
   meta: {
-    title: "Sirius | Your local AI agent for Windows",
+    title: "Sirius - Your local AI agent for Windows",
     description:
       "Sirius is a desktop AI agent that runs on your PC with your own API keys. Code, skills, voice, email, and more under a quiet starfield.",
   },

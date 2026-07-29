@@ -2,7 +2,7 @@
 
 const zh: Dictionary = {
   meta: {
-    title: "Sirius | 面向 Windows 的本地 AI 代理",
+    title: "Sirius - 面向 Windows 的本地 AI 代理",
     description:
       "Sirius 是一款在您的电脑上运行、使用您自己 API 密钥的桌面 AI 代理。在宁静星空下完成代码、技能、语音、邮件等更多工作。",
   },

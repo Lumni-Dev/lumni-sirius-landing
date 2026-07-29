@@ -2,7 +2,7 @@
 
 const de: Dictionary = {
   meta: {
-    title: "Sirius | Dein lokaler KI-Agent für Windows",
+    title: "Sirius - Dein lokaler KI-Agent für Windows",
     description:
       "Sirius ist ein Desktop-KI-Agent, der auf deinem PC mit deinen eigenen API-Keys läuft. Code, Skills, Stimme, E-Mail und mehr unter einem ruhigen Sternenhimmel.",
   },

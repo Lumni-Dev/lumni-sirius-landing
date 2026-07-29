@@ -2,7 +2,7 @@
 
 const it: Dictionary = {
   meta: {
-    title: "Sirius | Il tuo agente IA locale per Windows",
+    title: "Sirius - Il tuo agente IA locale per Windows",
     description:
       "Sirius è un agente IA desktop che gira sul tuo PC con le tue chiavi API. Codice, skills, voce, e-mail e altro sotto un cielo stellato quieto.",
   },
