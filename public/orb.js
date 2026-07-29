@@ -72,6 +72,7 @@
   let lookY = 0;
   let canvasHalfW = 0;
   let canvasHalfH = 0;
+  let lastResizeKey = "";
   let resizeTimers = [];
   const LARGE_MQ =
     typeof window.matchMedia === "function"
@@ -661,17 +662,22 @@
     if (!renderer || !stage || !canvas || !camera) return;
     const w = Math.max(1, stage.clientWidth || 1);
     const h = Math.max(1, stage.clientHeight || 1);
-    const rect = stage.getBoundingClientRect();
-    const stageCx = rect.left + rect.width / 2;
-    const stageCy = rect.top + rect.height / 2;
     const vw = window.innerWidth || w;
     const vh = window.innerHeight || h;
 
-    // Canvas cobre a viewport a partir do centro do orb (ondas full-bleed).
-    const halfW = Math.max(stageCx, vw - stageCx, w / 2) + CANVAS_PAD;
-    const halfH = Math.max(stageCy, vh - stageCy, h / 2) + CANVAS_PAD;
+    // Cover one viewport centered on the orb. Do NOT use the stage's
+    // getBoundingClientRect offset — that grew/shrank overscan while
+    // scrolling and made the star look like it was zooming.
+    const halfW = Math.max(vw / 2, w / 2) + CANVAS_PAD;
+    const halfH = Math.max(vh / 2, h / 2) + CANVAS_PAD;
     const rw = Math.max(1, Math.ceil(halfW * 2));
     const rh = Math.max(1, Math.ceil(halfH * 2));
+    const key = `${rw}x${rh}@${w}x${h}`;
+    if (key === lastResizeKey) {
+      placeCanvas();
+      return;
+    }
+    lastResizeKey = key;
 
     canvasHalfW = halfW;
     canvasHalfH = halfH;
@@ -1002,6 +1008,7 @@
       } catch (_) {}
       renderer = null;
       scene = null;
+      lastResizeKey = "";
     }
     if (!renderer && !build()) return;
     resize();
