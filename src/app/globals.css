@@ -649,12 +649,10 @@ a.btn {
 .principles {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(18px, 3vw, 28px);
+  gap: clamp(28px, 4.5vw, 48px);
 }
 
 .principle {
-  padding-top: 16px;
-  border-top: 1px solid var(--hairline-strong);
   min-width: 0;
 }
 
