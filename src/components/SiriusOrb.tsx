@@ -24,7 +24,10 @@ function ensureOrbScripts(): Promise<void> {
       if (!window.SiriusOrb) {
         await loadScript("/orb.js");
       }
-    })();
+    })().catch((err) => {
+      scriptsReady = null;
+      throw err;
+    });
   }
   return scriptsReady;
 }
@@ -76,7 +79,11 @@ export function SiriusOrb({ className = "" }: Props) {
     let visible = true;
 
     const boot = async () => {
-      await ensureOrbScripts();
+      try {
+        await ensureOrbScripts();
+      } catch {
+        return;
+      }
       if (cancelled || !window.SiriusOrb) return;
 
       await new Promise<void>((r) => requestAnimationFrame(() => r()));
@@ -126,6 +133,7 @@ export function SiriusOrb({ className = "" }: Props) {
       window.clearTimeout(resizeTimer);
       resizeObserver?.disconnect();
       io?.disconnect();
+      window.SiriusOrb?.stop();
     };
   }, []);
 
