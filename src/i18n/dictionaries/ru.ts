@@ -2,7 +2,7 @@
 
 const ru: Dictionary = {
   meta: {
-    title: "Sirius | Ваш локальный ИИ-агент для Windows",
+    title: "Sirius - Ваш локальный ИИ-агент для Windows",
     description:
       "Sirius — настольный ИИ-агент, который работает на вашем ПК с вашими API-ключами. Код, skills, голос, почта и многое другое под тихим звёздным небом.",
   },

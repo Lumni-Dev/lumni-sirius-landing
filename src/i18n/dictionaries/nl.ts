@@ -2,7 +2,7 @@
 
 const nl: Dictionary = {
   meta: {
-    title: "Sirius | Jouw lokale AI-agent voor Windows",
+    title: "Sirius - Jouw lokale AI-agent voor Windows",
     description:
       "Sirius is een desktop-AI-agent die op je pc draait met je eigen API-sleutels. Code, skills, stem, e-mail en meer onder een stille sterrenhemel.",
   },

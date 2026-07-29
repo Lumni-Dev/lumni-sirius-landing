@@ -2,7 +2,7 @@
 
 const ko: Dictionary = {
   meta: {
-    title: "Sirius | Windows용 로컬 AI 에이전트",
+    title: "Sirius - Windows용 로컬 AI 에이전트",
     description:
       "Sirius는 본인 API 키로 PC에서 실행되는 데스크톱 AI 에이전트입니다. 코드, 스킬, 음성, 이메일 등을 고요한 별빛 아래에서.",
   },

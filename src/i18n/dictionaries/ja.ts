@@ -2,7 +2,7 @@
 
 const ja: Dictionary = {
   meta: {
-    title: "Sirius | Windows向けローカルAIエージェント",
+    title: "Sirius - Windows向けローカルAIエージェント",
     description:
       "Siriusは、ご自身のAPIキーでPC上で動くデスクトップAIエージェントです。コード、スキル、音声、メールなどを静かな星空の下で。",
   },
