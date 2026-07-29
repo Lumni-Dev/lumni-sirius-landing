@@ -51,6 +51,8 @@
   const WAVE_COUNT = 2;
   const WAVE_SPEED = 0.048;
   const CANVAS_PAD = 24; // folga além da viewport
+  const BASE_CAM_Z = 7.6;
+  const BASE_FOV = 40;
 
   // Camadas "mágicas" extras: céu profundo, fita de luz, raios de difração,
   // estrelas cadentes e brasas de fala.
@@ -593,8 +595,8 @@
     renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.75));
     scene = new THREE.Scene();
-    camera = new THREE.PerspectiveCamera(40, 1, 0.1, 100);
-    camera.position.set(0, 0, 7.6);
+    camera = new THREE.PerspectiveCamera(BASE_FOV, 1, 0.1, 200);
+    camera.position.set(0, 0, BASE_CAM_Z);
     clock = new THREE.Clock();
     shared.uTex.value = softDotTexture();
     // Reset layered refs so a remount never double-adds into a stale scene.
@@ -629,33 +631,32 @@
     const vw = window.innerWidth || w;
     const vh = window.innerHeight || h;
 
-    const pageH = Math.max(
-      vh,
-      document.documentElement?.scrollHeight || 0,
-      document.body?.scrollHeight || 0,
-    );
-    const stageCenterDocY = rect.top + (window.scrollY || 0) + h / 2;
+    // Canvas cobre a viewport a partir do centro do orb (ondas full-bleed).
     const halfW = Math.max(stageCx, vw - stageCx, w / 2) + CANVAS_PAD;
-    const halfH =
-      Math.max(stageCenterDocY, pageH - stageCenterDocY, h / 2) + CANVAS_PAD;
+    const halfH = Math.max(stageCy, vh - stageCy, h / 2) + CANVAS_PAD;
     const rw = Math.max(1, Math.ceil(halfW * 2));
-    const rh = Math.max(1, Math.min(Math.ceil(halfH * 2), 8000));
+    const rh = Math.max(1, Math.ceil(halfH * 2));
 
     renderer.setSize(rw, rh, false);
     canvas.style.width = `${rw}px`;
     canvas.style.height = `${rh}px`;
     canvas.style.left = `${(w - rw) / 2}px`;
     canvas.style.top = `${(h - rh) / 2}px`;
+
+    // Afastar a câmera na mesma proporção do overscan: o recorte do stage
+    // mantém o tamanho original da estrela; as ondas ainda chegam nas bordas.
+    const overscan = Math.max(rw / w, rh / h, 1);
+    camera.fov = BASE_FOV;
+    camera.position.z = BASE_CAM_Z * overscan;
     camera.aspect = rw / rh;
     camera.updateProjectionMatrix();
     shared.uPixelRatio.value = Math.min(window.devicePixelRatio || 1, 1.75);
 
-    // Escala mundo para o anel alcançar laterais e fundo.
-    const dist = Math.abs(camera.position.z - CENTER.z) || 7.6;
+    const dist = Math.abs(camera.position.z - CENTER.z) || BASE_CAM_Z;
     const vFov = (camera.fov * Math.PI) / 180;
     const visibleH = 2 * Math.tan(vFov / 2) * dist;
     const visibleW = visibleH * camera.aspect;
-    waveMaxR = Math.max(8, visibleW * 1.06, visibleH * 1.06);
+    waveMaxR = Math.max(8, visibleW * 1.04, visibleH * 1.04);
   }
 
   function frame() {
