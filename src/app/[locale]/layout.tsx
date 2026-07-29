@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { JetBrains_Mono, Orbitron, Space_Grotesk } from "next/font/google";
 
 import { InteractionLock } from "@/components/InteractionLock";
+import { EnsureScrollTop } from "@/components/EnsureScrollTop";
 import {
   getLocaleDefinition,
   LOCALES,
@@ -90,6 +91,7 @@ export default async function LocaleLayout({
       className={`${space.variable} ${orbitron.variable} ${mono.variable}`}
     >
       <body>
+        <EnsureScrollTop />
         <InteractionLock />
         {children}
       </body>
