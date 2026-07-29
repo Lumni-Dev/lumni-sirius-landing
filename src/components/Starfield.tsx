@@ -38,7 +38,7 @@ export function Starfield() {
     let raf = 0;
     let running = true;
     let last = performance.now();
-    const drift = { x: 0, y: 0, vx: 0.1, vy: 0.06 };
+    const drift = { x: 0, y: 0, vx: 0.32, vy: 0.2 };
     // Mouse look: target + smoothed, for depth parallax on large screens.
     const look = { x: 0, y: 0, tx: 0, ty: 0 };
 
@@ -116,8 +116,8 @@ export function Starfield() {
         raf = 0;
         return;
       }
-      // ~30fps is enough for ambient drift
-      if (now - last < 32) {
+      // ~45fps for snappier sky motion
+      if (now - last < 22) {
         raf = requestAnimationFrame(frame);
         return;
       }
@@ -126,18 +126,18 @@ export function Starfield() {
       if (!reduced) {
         drift.x += drift.vx * dt;
         drift.y += drift.vy * dt;
-        look.x += (look.tx - look.x) * Math.min(1, 6 * dt);
-        look.y += (look.ty - look.y) * Math.min(1, 6 * dt);
+        look.x += (look.tx - look.x) * Math.min(1, 14 * dt);
+        look.y += (look.ty - look.y) * Math.min(1, 14 * dt);
         syncSkyVars();
       }
       ctx.clearRect(0, 0, w, h);
 
       for (const st of stars) {
-        const x = ((st.x + drift.x * (0.04 + st.z * 0.08)) % 1 + 1) % 1;
-        const y = ((st.y + drift.y * (0.03 + st.z * 0.06)) % 1 + 1) % 1;
+        const x = ((st.x + drift.x * (0.12 + st.z * 0.22)) % 1 + 1) % 1;
+        const y = ((st.y + drift.y * (0.09 + st.z * 0.16)) % 1 + 1) % 1;
         // Near stars (higher z) shift more — sky depth when looking around.
-        const px = look.x * (10 + st.z * 36);
-        const py = look.y * (8 + st.z * 26);
+        const px = look.x * (28 + st.z * 78);
+        const py = look.y * (20 + st.z * 58);
         const sx = x * w + px;
         const sy = y * h + py;
         const wave = 0.5 + 0.5 * Math.sin(now * 0.001 * st.speed + st.phase);

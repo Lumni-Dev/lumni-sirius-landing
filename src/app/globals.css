@@ -98,19 +98,19 @@ a.btn {
 
 @media (min-width: 960px) {
   .backdrop canvas {
-    transform: perspective(1400px) rotateY(calc(var(--sky-px) * -5deg))
-      rotateX(calc(var(--sky-py) * 3.5deg))
-      translate3d(calc(var(--sky-px) * -18px), calc(var(--sky-py) * -12px), 0);
+    transform: perspective(900px) rotateY(calc(var(--sky-px) * -12deg))
+      rotateX(calc(var(--sky-py) * 9deg))
+      translate3d(calc(var(--sky-px) * -48px), calc(var(--sky-py) * -32px), 0);
   }
 
   .haze {
     animation: none;
     transform: translate3d(
-        calc(var(--sky-px) * -36px),
-        calc(var(--sky-py) * -22px),
+        calc(var(--sky-px) * -72px),
+        calc(var(--sky-py) * -48px),
         0
       )
-      scale(1.06);
+      scale(1.12);
   }
 }
 
@@ -356,11 +356,10 @@ a.btn {
 }
 
 #orb-canvas {
-  position: fixed;
+  position: absolute;
   display: block;
   pointer-events: none;
-  z-index: 1;
-  /* width/height/left/top: set by orb.js (viewport-fixed, no document scroll inflate) */
+  /* width/height/left/top: set by orb.js overscan */
 }
 
 /* ---- hero ---- */
@@ -385,7 +384,8 @@ a.btn {
   background: transparent;
   border: 0;
   order: 2;
-  animation: rise 1s var(--ease) 0.1s both;
+  /* Opacity-only — transform on this node broke orb canvas placement. */
+  animation: rise-fade 1s var(--ease) 0.1s both;
 }
 
 .hero-copy {
@@ -849,6 +849,15 @@ a.btn {
   to {
     opacity: 1;
     transform: none;
+  }
+}
+
+@keyframes rise-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

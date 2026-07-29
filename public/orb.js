@@ -633,19 +633,20 @@
 
   function placeCanvas() {
     if (!canvas || !stage || !canvasHalfW || !canvasHalfH) return;
-    const rect = stage.getBoundingClientRect();
-    const stageCx = rect.left + rect.width / 2;
-    const stageCy = rect.top + rect.height / 2;
-    // Fixed to the viewport so overscan never expands document scroll height.
-    canvas.style.position = "fixed";
-    canvas.style.left = `${stageCx - canvasHalfW}px`;
-    canvas.style.top = `${stageCy - canvasHalfH}px`;
+    const w = stage.clientWidth || 1;
+    const h = stage.clientHeight || 1;
+    const rw = Math.max(1, Math.ceil(canvasHalfW * 2));
+    const rh = Math.max(1, Math.ceil(canvasHalfH * 2));
+    // Absolute inside #stage — fixed broke under hero transform/animation.
+    canvas.style.position = "absolute";
+    canvas.style.left = `${(w - rw) / 2}px`;
+    canvas.style.top = `${(h - rh) / 2}px`;
   }
 
   function resize() {
     if (!renderer || !stage || !canvas || !camera) return;
-    const w = stage.clientWidth || 1;
-    const h = stage.clientHeight || 1;
+    const w = Math.max(1, stage.clientWidth || 1);
+    const h = Math.max(1, stage.clientHeight || 1);
     const rect = stage.getBoundingClientRect();
     const stageCx = rect.left + rect.width / 2;
     const stageCy = rect.top + rect.height / 2;
@@ -739,12 +740,12 @@
         targetY = py;
       }
     }
-    lookX += (targetX - lookX) * 0.08;
-    lookY += (targetY - lookY) * 0.08;
-    camera.position.x = Math.sin(t * 0.05) * 0.22 + lookX * 0.42;
-    camera.position.y = Math.cos(t * 0.041) * 0.16 - lookY * 0.32;
+    lookX += (targetX - lookX) * 0.16;
+    lookY += (targetY - lookY) * 0.16;
+    camera.position.x = Math.sin(t * 0.05) * 0.22 + lookX * 0.95;
+    camera.position.y = Math.cos(t * 0.041) * 0.16 - lookY * 0.72;
     camera.lookAt(0, 0, 0);
-    if (starfield) starfield.rotation.y = t * 0.006 + lookX * 0.04;
+    if (starfield) starfield.rotation.y = t * 0.006 + lookX * 0.1;
 
     // Aura central: brilho base sempre presente (respiração lenta) que se
     // intensifica com a fala.
