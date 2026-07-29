@@ -4,7 +4,7 @@ const it: Dictionary = {
   meta: {
     title: "Sirius - Il tuo agente IA locale per Windows",
     description:
-      "Sirius è un agente IA desktop che gira sul tuo PC con le tue chiavi API. Codice, skills, voce, e-mail e altro sotto un cielo stellato quieto.",
+      "Sirius è un agente IA desktop che gira sul tuo PC con le tue chiavi API. Codice, skills, voce, e-mail e altro — locale e sotto il tuo controllo.",
   },
   nav: {
     features: "Funzionalità",
@@ -17,14 +17,14 @@ const it: Dictionary = {
   hero: {
     brand: "Sirius",
     title: "Il tuo agente IA locale",
-    titleMuted: " sotto un cielo quieto.",
+    titleMuted: "  per Windows.",
     lead: "Un agente desktop per Windows che programma, parla e organizza con strumenti nativi e le tue chiavi API.",
     ctaPrimary: "Prossimamente",
-    ctaSecondary: "Esplora la notte",
+    ctaSecondary: "Vedi le funzionalità",
   },
   features: {
     kicker: "Capacità",
-    title: "Ciò che la stella porta alla tua scrivania.",
+    title: "Ciò che Sirius porta alla tua scrivania.",
     lead: "Una sola composizione per il lavoro: chat, strumenti e integrazioni, senza trasformare il desktop in un collage di dashboard.",
     items: [
       {
@@ -67,7 +67,7 @@ const it: Dictionary = {
   },
   providers: {
     kicker: "Costellazione",
-    title: "Ogni provider sulla mappa.",
+    title: "Ogni provider in un solo posto.",
     lead: "I backend live brillano ora. Il resto aspetta come slot Soon, pronti quando arriverà l’SDK o la CLI nativa.",
     ariaList: "Provider di IA",
     live: "Live",
@@ -83,20 +83,20 @@ const it: Dictionary = {
         body: "Le chiavi API vivono nel keyring del SO. Il modello gira in locale tramite SDK e CLI nativi.",
       },
       {
-        kicker: "02 · Force",
+        kicker: "02 · Sforzo",
         title: "Spendi solo ciò che serve",
         body: "Sforzo, permessi e routing Auto scelgono il percorso più economico che porta comunque a termine il lavoro.",
       },
       {
-        kicker: "03 · Cielo",
+        kicker: "03 · Focus",
         title: "Un posto quieto per lavorare",
-        body: "Starfield, orb e Space Grotesk. Il desktop si apre come la notte, non come una dashboard affollata.",
+        body: "Interfaccia pulita con Space Grotesk. Il desktop resta focalizzato, non una dashboard affollata.",
       },
     ],
   },
   cta: {
     brand: "Sirius",
-    lead: "Installa su Windows. Incolla la chiave. Chiedi aiuto sotto la Force.",
+    lead: "Installa su Windows. Incolla la chiave. Chiedi aiuto.",
     button: "Prossimamente",
     mailSubject: "Download di Sirius",
   },

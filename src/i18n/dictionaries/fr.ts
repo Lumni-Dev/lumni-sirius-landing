@@ -17,14 +17,14 @@ const fr: Dictionary = {
   hero: {
     brand: "Sirius",
     title: "Votre agent IA local",
-    titleMuted: " sous un ciel tranquille.",
+    titleMuted: " pour Windows.",
     lead: "Un agent de bureau pour Windows qui code, parle et organise avec des outils natifs et vos propres clés API.",
     ctaPrimary: "Bientôt",
-    ctaSecondary: "Explorer la nuit",
+    ctaSecondary: "Voir les capacités",
   },
   features: {
     kicker: "Capacités",
-    title: "Ce que l’étoile apporte à votre bureau.",
+    title: "Ce que Sirius apporte à votre bureau.",
     lead: "Une seule composition pour le travail : chat, outils et intégrations, sans transformer votre bureau en collage de tableaux de bord.",
     items: [
       {
@@ -66,8 +66,8 @@ const fr: Dictionary = {
     ],
   },
   providers: {
-    kicker: "Constellation",
-    title: "Chaque fournisseur sur la carte.",
+    kicker: "Fournisseurs",
+    title: "Chaque fournisseur au même endroit.",
     lead: "Les backends en ligne brillent déjà. Le reste attend en slots Soon, prêts dès que leur SDK ou CLI natif arrive.",
     ariaList: "Fournisseurs d’IA",
     live: "En ligne",
@@ -83,20 +83,20 @@ const fr: Dictionary = {
         body: "Les clés API vivent dans le keyring du système. Le modèle s’exécute localement via des SDK et CLI natifs.",
       },
       {
-        kicker: "02 · Force",
+        kicker: "02 · Effort",
         title: "Ne dépensez que le nécessaire",
         body: "L’effort, les permissions et le routage Auto choisissent le chemin le moins cher qui mène encore au résultat.",
       },
       {
-        kicker: "03 · Ciel",
+        kicker: "03 · Focus",
         title: "Un endroit calme pour travailler",
-        body: "Starfield, orb et Space Grotesk. Le bureau s’ouvre comme la nuit, pas comme un dashboard surchargé.",
+        body: "Interface claire avec Space Grotesk. Le bureau reste concentré, pas un dashboard surchargé.",
       },
     ],
   },
   cta: {
     brand: "Sirius",
-    lead: "Installez sur Windows. Collez votre clé. Demandez de l’aide sous la Force.",
+    lead: "Installez sur Windows. Collez votre clé. Demandez de l’aide.",
     button: "Bientôt",
     mailSubject: "Téléchargement de Sirius",
   },

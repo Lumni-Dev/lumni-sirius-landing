@@ -17,14 +17,14 @@ const zh: Dictionary = {
   hero: {
     brand: "Sirius",
     title: "你的本地 AI 代理",
-    titleMuted: "，在宁静的天空下。",
+    titleMuted: "（适用于 Windows）。",
     lead: "一款 Windows 桌面代理，使用原生工具和您自己的 API 密钥完成编程、对话与整理。",
     ctaPrimary: "即将推出",
-    ctaSecondary: "探索夜空",
+    ctaSecondary: "查看功能",
   },
   features: {
     kicker: "能力",
-    title: "这颗星带到你桌面的东西。",
+    title: "Sirius 带到你桌面的东西。",
     lead: "面向工作的单一构图：聊天、工具与集成，而不会把桌面变成仪表盘拼贴。",
     items: [
       {
@@ -67,7 +67,7 @@ const zh: Dictionary = {
   },
   providers: {
     kicker: "星座",
-    title: "地图上的每一个提供商。",
+    title: "所有提供商集中一处。",
     lead: "在线后端此刻已在发光。其余以 Soon 插槽等待，待其原生 SDK 或 CLI 就绪即可启用。",
     ariaList: "AI 提供商",
     live: "在线",
@@ -83,12 +83,12 @@ const zh: Dictionary = {
         body: "API 密钥保存在操作系统钥匙串中。模型通过原生 SDK 和 CLI 在本地运行。",
       },
       {
-        kicker: "02 · Force",
+        kicker: "02 · 力度",
         title: "只花必要的成本",
         body: "力度、权限与 Auto 路由选择仍能完成工作的最便宜路径。",
       },
       {
-        kicker: "03 · 天空",
+        kicker: "03 · 专注",
         title: "安静的工作之地",
         body: "Starfield、orb 与 Space Grotesk。桌面如夜色展开，而非拥挤的仪表盘。",
       },

@@ -4,7 +4,7 @@ const pt: Dictionary = {
   meta: {
     title: "Sirius - Seu agente de IA local para Windows",
     description:
-      "Sirius é um agente de IA para desktop que roda no seu PC com as suas próprias chaves de API. Código, skills, voz, e-mail e mais sob um céu estrelado.",
+      "Sirius é um agente de IA para desktop que roda no seu PC com as suas próprias chaves de API. Código, skills, voz, e-mail e mais — local e sob o seu controle.",
   },
   nav: {
     features: "Recursos",
@@ -17,14 +17,14 @@ const pt: Dictionary = {
   hero: {
     brand: "Sirius",
     title: "Seu agente de IA local",
-    titleMuted: " sob um céu quieto.",
+    titleMuted: " para Windows.",
     lead: "Um agente desktop para Windows que programa, fala e organiza com ferramentas nativas e as suas próprias chaves de API.",
     ctaPrimary: "Em breve",
-    ctaSecondary: "Explorar a noite",
+    ctaSecondary: "Ver capacidades",
   },
   features: {
     kicker: "Capacidades",
-    title: "O que a estrela traz para a sua mesa.",
+    title: "O que o Sirius traz para a sua mesa.",
     lead: "Uma composição para o trabalho: chat, ferramentas e integrações, sem transformar o desktop num colagem de painéis.",
     items: [
       {
@@ -61,14 +61,14 @@ const pt: Dictionary = {
         n: "06",
         label: "Controle",
         title: "Esforço, permissões, Auto",
-        body: "Escolha força e permissão por turno, ou deixe o Auto escolher o modelo mais barato que ainda resolve.",
+        body: "Escolha esforço e permissão por turno, ou deixe o Auto escolher o modelo mais barato que ainda resolve.",
       },
     ],
   },
   providers: {
-    kicker: "Constelação",
-    title: "Cada provedor no mapa.",
-    lead: "Os backends ao vivo brilham agora. O resto espera como slots Soon, prontos quando o SDK ou CLI nativo chegar.",
+    kicker: "Provedores",
+    title: "Cada provedor em um só lugar.",
+    lead: "Os backends ao vivo já estão prontos. O resto espera como slots Soon, disponíveis quando o SDK ou CLI nativo chegar.",
     ariaList: "Provedores de IA",
     live: "Ao vivo",
     soon: "Em breve",
@@ -83,20 +83,20 @@ const pt: Dictionary = {
         body: "As chaves de API ficam no keyring do SO. O modelo roda localmente via SDKs e CLIs nativos.",
       },
       {
-        kicker: "02 · Força",
+        kicker: "02 · Esforço",
         title: "Gaste só o necessário",
         body: "Esforço, permissões e o roteamento Auto escolhem o caminho mais barato que ainda entrega o resultado.",
       },
       {
-        kicker: "03 · Céu",
-        title: "Um lugar quieto para trabalhar",
-        body: "Starfield, orb e Space Grotesk. O desktop abre como a noite, não como um dashboard lotado.",
+        kicker: "03 · Foco",
+        title: "Um lugar calmo para trabalhar",
+        body: "Interface limpa com Space Grotesk. O desktop permanece focado, não um dashboard lotado.",
       },
     ],
   },
   cta: {
     brand: "Sirius",
-    lead: "Instale no Windows. Cole a sua chave. Peça ajuda sob a Força.",
+    lead: "Instale no Windows. Cole a sua chave. Peça ajuda.",
     button: "Em breve",
     mailSubject: "Download do Sirius",
   },

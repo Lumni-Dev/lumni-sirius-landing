@@ -17,14 +17,14 @@ const de: Dictionary = {
   hero: {
     brand: "Sirius",
     title: "Dein lokaler KI-Agent",
-    titleMuted: " unter einem stillen Himmel.",
+    titleMuted: "  für Windows.",
     lead: "Ein Windows-Desktop-Agent, der mit nativen Tools und deinen eigenen API-Keys programmiert, spricht und organisiert.",
     ctaPrimary: "Demnächst",
-    ctaSecondary: "Die Nacht erkunden",
+    ctaSecondary: "Funktionen ansehen",
   },
   features: {
     kicker: "Fähigkeiten",
-    title: "Was der Stern auf deinen Schreibtisch bringt.",
+    title: "Was Sirius auf deinen Schreibtisch bringt.",
     lead: "Eine Komposition für die Arbeit: Chat, Tools und Integrationen — ohne deinen Desktop in ein Dashboard-Collage zu verwandeln.",
     items: [
       {
@@ -67,7 +67,7 @@ const de: Dictionary = {
   },
   providers: {
     kicker: "Konstellation",
-    title: "Jeder Anbieter auf der Karte.",
+    title: "Jeder Anbieter an einem Ort.",
     lead: "Live-Backends leuchten jetzt. Der Rest wartet als Soon-Slots, bereit wenn ihr natives SDK oder CLI kommt.",
     ariaList: "KI-Anbieter",
     live: "Live",
@@ -83,12 +83,12 @@ const de: Dictionary = {
         body: "API-Keys liegen im OS-Keyring. Das Modell läuft lokal über native SDKs und CLIs.",
       },
       {
-        kicker: "02 · Force",
+        kicker: "02 · Aufwand",
         title: "Gib nur aus, was nötig ist",
         body: "Aufwand, Berechtigungen und Auto-Routing wählen den günstigsten Weg, der die Aufgabe trotzdem erledigt.",
       },
       {
-        kicker: "03 · Himmel",
+        kicker: "03 · Fokus",
         title: "Ein ruhiger Ort zum Arbeiten",
         body: "Starfield, Orb und Space Grotesk. Der Desktop öffnet sich wie die Nacht — nicht wie ein überfülltes Dashboard.",
       },

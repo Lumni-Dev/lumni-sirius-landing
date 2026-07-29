@@ -17,14 +17,14 @@ const ja: Dictionary = {
   hero: {
     brand: "Sirius",
     title: "あなたのローカルAIエージェント",
-    titleMuted: "、静かな空の下で。",
+    titleMuted: "（Windows向け）。",
     lead: "ネイティブツールとご自身のAPIキーで、コーディング・会話・整理を行うWindowsデスクトップエージェント。",
     ctaPrimary: "近日公開",
-    ctaSecondary: "夜を探索する",
+    ctaSecondary: "機能を見る",
   },
   features: {
     kicker: "できること",
-    title: "星がデスクにもたらすもの。",
+    title: "Siriusがデスクにもたらすもの。",
     lead: "仕事のための一つの構成：チャット、ツール、連携。デスクトップをダッシュボードの寄せ集めにはしません。",
     items: [
       {
@@ -67,7 +67,7 @@ const ja: Dictionary = {
   },
   providers: {
     kicker: "星座",
-    title: "地図上のすべてのプロバイダー。",
+    title: "すべてのプロバイダーを一箇所に。",
     lead: "ライブのバックエンドはすでに輝いています。残りはSoonスロットとして待機し、ネイティブSDKやCLIが揃い次第利用可能になります。",
     ariaList: "AIプロバイダー",
     live: "ライブ",
@@ -83,12 +83,12 @@ const ja: Dictionary = {
         body: "APIキーはOSのキーリングに保存。モデルはネイティブSDKとCLI経由でローカル実行。",
       },
       {
-        kicker: "02 · Force",
+        kicker: "02 · 努力度",
         title: "必要な分だけ使う",
         body: "努力度、権限、Autoルーティングが、仕事を終えられる最安の道を選びます。",
       },
       {
-        kicker: "03 · 空",
+        kicker: "03 · フォーカス",
         title: "静かに働ける場所",
         body: "Starfield、orb、Space Grotesk。デスクトップは混雑したダッシュボードではなく、夜のように開きます。",
       },
