@@ -53,6 +53,8 @@
   const CANVAS_PAD = 24; // folga além da viewport
   const BASE_CAM_Z = 7.6;
   const BASE_FOV = 40;
+  /** < 1 aproxima a câmera no recorte do stage (estrela um pouco maior). */
+  const ORB_FRAME = 0.9;
 
   // Camadas "mágicas" extras: céu profundo, fita de luz, raios de difração,
   // estrelas cadentes e brasas de fala.
@@ -643,11 +645,11 @@
     canvas.style.left = `${(w - rw) / 2}px`;
     canvas.style.top = `${(h - rh) / 2}px`;
 
-    // Afastar a câmera na mesma proporção do overscan: o recorte do stage
-    // mantém o tamanho original da estrela; as ondas ainda chegam nas bordas.
+    // Afastar a câmera na proporção do overscan (mantém enquadramento do stage)
+    // e ORB_FRAME aproxima um pouco para a estrela ficar maior.
     const overscan = Math.max(rw / w, rh / h, 1);
     camera.fov = BASE_FOV;
-    camera.position.z = BASE_CAM_Z * overscan;
+    camera.position.z = BASE_CAM_Z * overscan * ORB_FRAME;
     camera.aspect = rw / rh;
     camera.updateProjectionMatrix();
     shared.uPixelRatio.value = Math.min(window.devicePixelRatio || 1, 1.75);
