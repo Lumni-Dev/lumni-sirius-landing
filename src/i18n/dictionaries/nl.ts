@@ -4,7 +4,7 @@ const nl: Dictionary = {
   meta: {
     title: "Sirius - Jouw lokale AI-agent voor Windows",
     description:
-      "Sirius is een desktop-AI-agent die op je pc draait met je eigen API-sleutel. Drie Sirius-modellen, 940 MCP-tools en goedkeuring per actie, op je pc en onder jouw controle.",
+      "Sirius is een desktop-AI-agent die op je pc draait. Drie Sirius-modellen, 940 MCP-tools en goedkeuring per actie, op je pc en onder jouw controle.",
   },
   nav: {
     features: "Functies",
@@ -18,7 +18,7 @@ const nl: Dictionary = {
     brand: "Sirius",
     title: "Jouw lokale AI-agent",
     titleMuted: " voor Windows.",
-    lead: "Een desktopagent voor Windows die codeert, bestanden bewerkt en je werk organiseert met 940 native tools en je eigen API-sleutel.",
+    lead: "Een desktopagent voor Windows die codeert, bestanden bewerkt en je werk organiseert met 940 native tools, direct op je machine.",
     ctaPrimary: "Binnenkort",
     ctaSecondary: "Bekijk mogelijkheden",
   },
@@ -31,7 +31,7 @@ const nl: Dictionary = {
         n: "01",
         label: "Agent",
         title: "Lokale AI op je pc",
-        body: "Drie Sirius-modellen draaien met je API-sleutel en worden automatisch gekozen voor elke taak. Jij vraagt, Sirius regelt het.",
+        body: "Drie Sirius-modellen draaien op je machine en worden automatisch gekozen voor elke taak. Jij vraagt, Sirius regelt het.",
       },
       {
         n: "02",
@@ -93,9 +93,9 @@ const nl: Dictionary = {
     title: "Gebouwd als de app die je al opent.",
     items: [
       {
-        kicker: "01 · Sleutels",
+        kicker: "01 · Lokaal",
         title: "Het blijft op je machine",
-        body: "Je API-sleutel blijft op je pc. De app is native voor Windows, zonder browser en zonder gepubliceerde poort.",
+        body: "Sirius is een native Windows-app die op je pc draait, zonder browser en zonder gepubliceerde poort.",
       },
       {
         kicker: "02 · Inspanning",
@@ -111,7 +111,7 @@ const nl: Dictionary = {
   },
   cta: {
     brand: "Sirius",
-    lead: "Installeer op Windows. Plak je sleutel. Vraag om hulp.",
+    lead: "Installeer op Windows. Open het. Vraag om hulp.",
     button: "Binnenkort",
     mailSubject: "Sirius-download",
   },

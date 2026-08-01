@@ -4,7 +4,7 @@ const ko: Dictionary = {
   meta: {
     title: "Sirius - Windows용 로컬 AI 에이전트",
     description:
-      "Sirius는 본인 API 키로 PC에서 실행되는 데스크톱 AI 에이전트입니다. 세 개의 Sirius 모델, 940개의 MCP 도구, 작업별 승인. 당신의 PC에서 당신의 통제 아래.",
+      "Sirius는 PC에서 실행되는 데스크톱 AI 에이전트입니다. 세 개의 Sirius 모델, 940개의 MCP 도구, 작업별 승인. 당신의 PC에서 당신의 통제 아래.",
   },
   nav: {
     features: "기능",
@@ -18,7 +18,7 @@ const ko: Dictionary = {
     brand: "Sirius",
     title: "당신의 로컬 AI 에이전트",
     titleMuted: " (Windows용).",
-    lead: "940개의 네이티브 도구와 본인 API 키로 코드를 작성하고, 파일을 편집하며, 업무를 정리하는 Windows 데스크톱 에이전트.",
+    lead: "940개의 네이티브 도구로 코드를 작성하고, 파일을 편집하며, 업무를 정리하는 Windows 데스크톱 에이전트. 바로 당신의 기기에서.",
     ctaPrimary: "곧 공개",
     ctaSecondary: "기능 보기",
   },
@@ -31,7 +31,7 @@ const ko: Dictionary = {
         n: "01",
         label: "에이전트",
         title: "PC의 로컬 AI",
-        body: "세 개의 Sirius 모델이 본인 API 키로 실행되며 각 작업에 맞게 자동으로 선택됩니다. 요청하면 Sirius가 처리합니다.",
+        body: "세 개의 Sirius 모델이 당신의 기기에서 실행되며 각 작업에 맞게 자동으로 선택됩니다. 요청하면 Sirius가 처리합니다.",
       },
       {
         n: "02",
@@ -93,9 +93,9 @@ const ko: Dictionary = {
     title: "이미 여는 앱처럼 만들어졌습니다.",
     items: [
       {
-        kicker: "01 · 키",
+        kicker: "01 · 로컬",
         title: "내 기기에 머무르기",
-        body: "API 키는 PC에 보관됩니다. 앱은 Windows 네이티브이며, 브라우저도 없고 공개된 포트도 없습니다.",
+        body: "Sirius는 PC에서 실행되는 Windows 네이티브 앱이며, 브라우저도 없고 공개된 포트도 없습니다.",
       },
       {
         kicker: "02 · 노력",
@@ -111,7 +111,7 @@ const ko: Dictionary = {
   },
   cta: {
     brand: "Sirius",
-    lead: "Windows에 설치하세요. 키를 붙여넣으세요. 도움을 요청하세요.",
+    lead: "Windows에 설치하세요. 앱을 여세요. 도움을 요청하세요.",
     button: "곧 공개",
     mailSubject: "Sirius 다운로드",
   },

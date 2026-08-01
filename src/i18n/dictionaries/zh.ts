@@ -4,7 +4,7 @@ const zh: Dictionary = {
   meta: {
     title: "Sirius，面向 Windows 的本地 AI 代理",
     description:
-      "Sirius 是一款在您的电脑上运行、使用您自己 API 密钥的桌面 AI 代理。三款 Sirius 模型、940 个 MCP 工具，以及逐操作审批，尽在您的电脑，由您掌控。",
+      "Sirius 是一款在您的电脑上运行的桌面 AI 代理。三款 Sirius 模型、940 个 MCP 工具，以及逐操作审批，尽在您的电脑，由您掌控。",
   },
   nav: {
     features: "功能",
@@ -18,7 +18,7 @@ const zh: Dictionary = {
     brand: "Sirius",
     title: "你的本地 AI 代理",
     titleMuted: "（适用于 Windows）。",
-    lead: "一款面向 Windows 的桌面代理，凭借 940 个原生工具和您自己的 API 密钥完成编程、编辑文件与整理工作。",
+    lead: "一款面向 Windows 的桌面代理，凭借 940 个原生工具，直接在您的机器上完成编程、编辑文件与整理工作。",
     ctaPrimary: "即将推出",
     ctaSecondary: "查看功能",
   },
@@ -31,7 +31,7 @@ const zh: Dictionary = {
         n: "01",
         label: "代理",
         title: "电脑上的本地 AI",
-        body: "三款 Sirius 模型使用您的 API 密钥运行，并为每项任务自动选择。您提出需求，Sirius 来处理。",
+        body: "三款 Sirius 模型在您的机器上运行，并为每项任务自动选择。您提出需求，Sirius 来处理。",
       },
       {
         n: "02",
@@ -93,9 +93,9 @@ const zh: Dictionary = {
     title: "做得像你已经打开的那款应用。",
     items: [
       {
-        kicker: "01 · 密钥",
+        kicker: "01 · 本地",
         title: "留在你的机器上",
-        body: "您的 API 密钥保存在您的电脑上。这款应用原生于 Windows，没有浏览器，也没有对外开放的端口。",
+        body: "Sirius 是一款原生于 Windows 的应用，在您的电脑上运行，没有浏览器，也没有对外开放的端口。",
       },
       {
         kicker: "02 · 力度",
@@ -111,7 +111,7 @@ const zh: Dictionary = {
   },
   cta: {
     brand: "Sirius",
-    lead: "安装到 Windows。粘贴你的密钥。寻求帮助。",
+    lead: "安装到 Windows。打开它。寻求帮助。",
     button: "即将推出",
     mailSubject: "下载 Sirius",
   },

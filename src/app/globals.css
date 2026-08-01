@@ -560,91 +560,6 @@ a.btn {
   max-width: 52ch;
 }
 
-/* Providers */
-.section-sky {
-  overflow: hidden;
-}
-
-.sky-band {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  border-block: 1px solid var(--hairline);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.02),
-    rgba(255, 255, 255, 0.01)
-  );
-  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
-}
-
-.sky-track {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  width: max-content;
-  padding: 18px 0;
-  animation: sky-drift 48s linear infinite;
-}
-
-.sky-name {
-  display: inline-flex;
-  align-items: center;
-  min-height: 34px;
-  padding: 0 14px;
-  font-size: 13px;
-  letter-spacing: 0.02em;
-  border-inline-end: 1px solid var(--hairline);
-  white-space: nowrap;
-}
-
-.sky-name.is-live {
-  color: var(--text);
-}
-
-.sky-name.is-soon {
-  color: var(--text-faint);
-}
-
-.sky-legend {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-top: 16px;
-  font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.sky-legend-live {
-  color: var(--text-muted);
-}
-
-.sky-legend-live::before,
-.sky-legend-soon::before {
-  content: "";
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  margin-inline-end: 8px;
-  border-radius: 50%;
-  vertical-align: 1px;
-}
-
-.sky-legend-live::before {
-  background: #d8dae4;
-}
-
-.sky-legend-soon {
-  color: var(--text-faint);
-}
-
-.sky-legend-soon::before {
-  background: var(--text-faint);
-  opacity: 0.55;
-}
-
 /* Principles */
 .principles {
   display: grid;
@@ -881,15 +796,6 @@ a.btn {
   }
 }
 
-@keyframes sky-drift {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
 @keyframes haze-drift {
   from {
     transform: translate3d(-1.5%, -1%, 0) scale(1);
@@ -902,7 +808,6 @@ a.btn {
 @media (prefers-reduced-motion: reduce) {
   .hero-copy,
   .hero-orb,
-  .sky-track,
   .haze {
     animation: none !important;
   }
@@ -917,28 +822,6 @@ a.btn {
   .cta-band .word {
     opacity: 1 !important;
     text-shadow: 0 0 18px rgba(255, 255, 255, 0.2) !important;
-  }
-
-  .section-sky,
-  .sky-band {
-    overflow: visible;
-  }
-
-  .sky-band {
-    mask-image: none;
-  }
-
-  .sky-track {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    max-width: 100%;
-    gap: 0;
-  }
-
-  .sky-track-dup {
-    display: none;
   }
 
   html {
