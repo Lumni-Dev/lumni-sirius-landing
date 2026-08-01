@@ -1,14 +1,14 @@
-﻿import type { Dictionary } from "@/i18n/types";
+import type { Dictionary } from "@/i18n/types";
 
 const zh: Dictionary = {
   meta: {
-    title: "Sirius - 面向 Windows 的本地 AI 代理",
+    title: "Sirius，面向 Windows 的本地 AI 代理",
     description:
-      "Sirius 是一款在您的电脑上运行、使用您自己 API 密钥的桌面 AI 代理。在宁静星空下完成代码、技能、语音、邮件等更多工作。",
+      "Sirius 是一款在您的电脑上运行、使用您自己 API 密钥的桌面 AI 代理。三款 Sirius 模型、940 个 MCP 工具，以及逐操作审批，尽在您的电脑，由您掌控。",
   },
   nav: {
     features: "功能",
-    providers: "提供商",
+    models: "模型",
     principles: "原则",
     download: "即将推出",
     ariaPrimary: "主导航",
@@ -18,60 +18,75 @@ const zh: Dictionary = {
     brand: "Sirius",
     title: "你的本地 AI 代理",
     titleMuted: "（适用于 Windows）。",
-    lead: "一款 Windows 桌面代理，使用原生工具和您自己的 API 密钥完成编程、对话与整理。",
+    lead: "一款面向 Windows 的桌面代理，凭借 940 个原生工具和您自己的 API 密钥完成编程、编辑文件与整理工作。",
     ctaPrimary: "即将推出",
     ctaSecondary: "查看功能",
   },
   features: {
     kicker: "能力",
     title: "Sirius 带到你桌面的东西。",
-    lead: "面向工作的单一构图：聊天、工具与集成，而不会把桌面变成仪表盘拼贴。",
+    lead: "面向真实工作的组合：聊天、工具与集成，而不会把桌面变成一堆面板的拼贴。",
     items: [
       {
         n: "01",
         label: "代理",
         title: "电脑上的本地 AI",
-        body: "Claude、GPT、Gemini、DeepSeek 等在您的机器上使用您自己的 API 密钥运行。Soon 插槽覆盖其余目录。",
+        body: "三款 Sirius 模型使用您的 API 密钥运行，并为每项任务自动选择。您提出需求，Sirius 来处理。",
       },
       {
         n: "02",
         label: "工具",
-        title: "Shell、文件与补丁",
-        body: "Sirius 使用提供商自带的工具检查和编辑工作区。没有自制工具大杂烩。",
+        title: "940 个 MCP 工具",
+        body: "48 个工具族，从文件和 git 到数据库、Office、图像和 PDF，每次请求都通过向量嵌入进行筛选。",
       },
       {
         n: "03",
         label: "Skills",
-        title: "个人技能与多智能体",
-        body: "将 /命令和专家代理保存在 ~/sirius。当消息匹配时它们会激活。",
+        title: "技能与子代理",
+        body: "保存 /命令和专家代理。当消息匹配时它们会自动激活，无需任何配置。",
       },
       {
         n: "04",
-        label: "语音",
-        title: "说与听",
-        body: "在编辑器中口述，并收听朗读的回复；Sirius 说话时麦克风会被干净地静音。",
+        label: "流式",
+        title: "实时回复",
+        body: "回复以流式方式到达，每个操作在执行前都要经过允许或拒绝的审批。",
       },
       {
         n: "05",
         label: "工作",
-        title: "邮件、笔记、闹钟、日程",
-        body: "将集成固定在侧栏：IMAP 邮件、快速笔记、闹钟和每日计划提示。",
+        title: "笔记、提醒、日程",
+        body: "快速笔记、提醒、闹钟和每日定时提示，全部保存在您电脑上的本地文件中。",
       },
       {
         n: "06",
         label: "控制",
         title: "力度、权限、Auto",
-        body: "每轮选择力度与权限，或让 Auto 选择仍能胜任的最便宜模型。",
+        body: "每轮选择力度与权限，或让 Auto 挑选仍能完成任务的最便宜模型。",
       },
     ],
   },
-  providers: {
-    kicker: "星座",
-    title: "所有提供商集中一处。",
-    lead: "在线后端此刻已在发光。其余以 Soon 插槽等待，待其原生 SDK 或 CLI 就绪即可启用。",
-    ariaList: "AI 提供商",
-    live: "在线",
-    soon: "Soon",
+  models: {
+    kicker: "模型",
+    title: "三款模型，一位助手。",
+    lead: "Sirius 为每次请求挑选合适的模型。您从不需要管理模型，只需提出需求。",
+    ariaList: "Sirius 模型",
+    items: [
+      {
+        name: "Sirius 1",
+        tier: "快速",
+        body: "用于聊天和轻量任务。回复简短、便宜，无需等待。",
+      },
+      {
+        name: "Sirius 2",
+        tier: "均衡",
+        body: "日常默认选择：文件、终端、数据与文档，在成本与质量之间保持稳健平衡。",
+      },
+      {
+        name: "Sirius 3",
+        tier: "最强能力",
+        body: "用于推理和多步骤流程，仅在任务确实需要时才调用。",
+      },
+    ],
   },
   principles: {
     kicker: "原则",
@@ -80,23 +95,23 @@ const zh: Dictionary = {
       {
         kicker: "01 · 密钥",
         title: "留在你的机器上",
-        body: "API 密钥保存在操作系统钥匙串中。模型通过原生 SDK 和 CLI 在本地运行。",
+        body: "您的 API 密钥保存在您的电脑上。这款应用原生于 Windows，没有浏览器，也没有对外开放的端口。",
       },
       {
         kicker: "02 · 力度",
         title: "只花必要的成本",
-        body: "力度、权限与 Auto 路由选择仍能完成工作的最便宜路径。",
+        body: "力度、权限与 Auto 路由挑选仍能交付结果的最便宜路径。",
       },
       {
         kicker: "03 · 专注",
         title: "安静的工作之地",
-        body: "Starfield、orb 与 Space Grotesk。桌面如夜色展开，而非拥挤的仪表盘。",
+        body: "采用 Space Grotesk 的简洁界面。桌面保持专注，而非拥挤的仪表盘。",
       },
     ],
   },
   cta: {
     brand: "Sirius",
-    lead: "安装到 Windows。粘贴你的密钥。在 Force 下寻求帮助。",
+    lead: "安装到 Windows。粘贴你的密钥。寻求帮助。",
     button: "即将推出",
     mailSubject: "下载 Sirius",
   },

@@ -1,14 +1,14 @@
-﻿import type { Dictionary } from "@/i18n/types";
+import type { Dictionary } from "@/i18n/types";
 
 const en: Dictionary = {
   meta: {
     title: "Sirius - Your local AI agent for Windows",
     description:
-      "Sirius is a desktop AI agent that runs on your PC with your own API keys. Code, skills, voice, email, and more — local and under your control.",
+      "Sirius is a desktop AI agent that runs on your PC with your own API key. Three Sirius models, 940 MCP tools and per-action approval, on your PC and under your control.",
   },
   nav: {
     features: "Features",
-    providers: "Providers",
+    models: "Models",
     principles: "Principles",
     download: "Coming soon",
     ariaPrimary: "Primary",
@@ -18,60 +18,75 @@ const en: Dictionary = {
     brand: "Sirius",
     title: "Your local AI agent",
     titleMuted: " for Windows.",
-    lead: "A Windows desktop agent that codes, speaks, and organizes with native tools and your own API keys.",
+    lead: "A desktop agent for Windows that codes, edits files and organizes your work with 940 native tools and your own API key.",
     ctaPrimary: "Coming soon",
     ctaSecondary: "See capabilities",
   },
   features: {
     kicker: "Capabilities",
     title: "What Sirius brings to your desk.",
-    lead: "One composition for work: chat, tools, and integrations, without turning your desktop into a dashboard collage.",
+    lead: "A composition for real work: chat, tools and integrations, without turning the desktop into a collage of panels.",
     items: [
       {
         n: "01",
         label: "Agent",
         title: "Local AI on your PC",
-        body: "Claude, GPT, Gemini, DeepSeek and more run on your machine with your own API keys. Soon slots cover the rest of the catalog.",
+        body: "Three Sirius models run with your API key and are picked automatically for each task. You ask, Sirius handles it.",
       },
       {
         n: "02",
         label: "Tools",
-        title: "Shell, files, and patches",
-        body: "Sirius inspects and edits your workspace with the provider’s own tools. No custom tool soup.",
+        title: "940 MCP tools",
+        body: "48 families, from files and git to databases, Office, images and PDFs, selected by embeddings on every request.",
       },
       {
         n: "03",
         label: "Skills",
-        title: "Personal skills & multi-agents",
-        body: "Save /commands and specialist agents under ~/sirius. They activate when your message matches.",
+        title: "Skills and subagents",
+        body: "Save /commands and specialist agents. They activate when the message matches, with nothing to configure.",
       },
       {
         n: "04",
-        label: "Voice",
-        title: "Talk and listen",
-        body: "Dictate into the composer and hear replies narrated, muted cleanly while Sirius speaks.",
+        label: "Streaming",
+        title: "Live replies",
+        body: "Replies arrive in streaming and every action goes through an Allow or Deny approval before it runs.",
       },
       {
         n: "05",
         label: "Work",
-        title: "Email, notes, alarms, schedules",
-        body: "Pin integrations on the rail: IMAP mail, quick notes, alarms, and daily scheduled prompts.",
+        title: "Notes, reminders, schedules",
+        body: "Quick notes, reminders, alarms and scheduled daily prompts, kept in local files on your PC.",
       },
       {
         n: "06",
         label: "Control",
         title: "Effort, permissions, Auto",
-        body: "Pick effort and permission per turn, or leave Auto to choose the cheapest model that still performs.",
+        body: "Pick effort and permission per turn, or let Auto choose the cheapest model that still gets it done.",
       },
     ],
   },
-  providers: {
-    kicker: "Providers",
-    title: "Every provider in one place.",
-    lead: "Live backends are ready now. The rest wait as Soon slots, available when their native SDK or CLI lands.",
-    ariaList: "AI providers",
-    live: "Live",
-    soon: "Soon",
+  models: {
+    kicker: "Models",
+    title: "Three models, one assistant.",
+    lead: "Sirius picks the right model for each request. You never manage a model, you just ask.",
+    ariaList: "Sirius models",
+    items: [
+      {
+        name: "Sirius 1",
+        tier: "Fast",
+        body: "For chat and light tasks. Short, cheap replies with no wait.",
+      },
+      {
+        name: "Sirius 2",
+        tier: "Balanced",
+        body: "The everyday default: files, terminal, data and documents, with a solid balance of cost and quality.",
+      },
+      {
+        name: "Sirius 3",
+        tier: "Most capable",
+        body: "For reasoning and many-step flows, called only when the task truly needs it.",
+      },
+    ],
   },
   principles: {
     kicker: "Principles",
@@ -79,13 +94,13 @@ const en: Dictionary = {
     items: [
       {
         kicker: "01 · Keys",
-        title: "Stay on your machine",
-        body: "API keys live in the OS keyring. The model runs locally through native SDKs and CLIs.",
+        title: "It stays on your machine",
+        body: "Your API key stays on your PC. The app is native to Windows, with no browser and no published port.",
       },
       {
         kicker: "02 · Effort",
         title: "Spend only what you need",
-        body: "Effort, permissions, and Auto routing pick the cheapest path that still gets the job done.",
+        body: "Effort, permissions and Auto routing pick the cheapest path that still delivers the result.",
       },
       {
         kicker: "03 · Focus",

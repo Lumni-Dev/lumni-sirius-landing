@@ -1,14 +1,14 @@
-﻿import type { Dictionary } from "@/i18n/types";
+import type { Dictionary } from "@/i18n/types";
 
 const ja: Dictionary = {
   meta: {
-    title: "Sirius - Windows向けローカルAIエージェント",
+    title: "Sirius - Windows向けのローカルAIエージェント",
     description:
-      "Siriusは、ご自身のAPIキーでPC上で動くデスクトップAIエージェントです。コード、スキル、音声、メールなどを静かな星空の下で。",
+      "Siriusは、ご自身のAPIキーでPC上で動作するデスクトップAIエージェントです。3つのSiriusモデル、940のMCPツール、アクションごとの承認。あなたのPC上で、あなたの管理下に。",
   },
   nav: {
     features: "機能",
-    providers: "プロバイダー",
+    models: "モデル",
     principles: "原則",
     download: "近日公開",
     ariaPrimary: "メイン",
@@ -18,60 +18,75 @@ const ja: Dictionary = {
     brand: "Sirius",
     title: "あなたのローカルAIエージェント",
     titleMuted: "（Windows向け）。",
-    lead: "ネイティブツールとご自身のAPIキーで、コーディング・会話・整理を行うWindowsデスクトップエージェント。",
+    lead: "940のネイティブツールとご自身のAPIキーで、コードを書き、ファイルを編集し、作業を整理するWindows向けデスクトップエージェント。",
     ctaPrimary: "近日公開",
     ctaSecondary: "機能を見る",
   },
   features: {
     kicker: "できること",
     title: "Siriusがデスクにもたらすもの。",
-    lead: "仕事のための一つの構成：チャット、ツール、連携。デスクトップをダッシュボードの寄せ集めにはしません。",
+    lead: "実際の仕事のための構成：チャット、ツール、連携。デスクトップをパネルの寄せ集めにはしません。",
     items: [
       {
         n: "01",
         label: "エージェント",
         title: "PC上のローカルAI",
-        body: "Claude、GPT、Gemini、DeepSeekなどが、ご自身のAPIキーでマシン上で動作。カタログの残りはSoonスロットがカバーします。",
+        body: "3つのSiriusモデルがご自身のAPIキーで動作し、タスクごとに自動で選ばれます。頼めば、Siriusが対応します。",
       },
       {
         n: "02",
         label: "ツール",
-        title: "シェル、ファイル、パッチ",
-        body: "Siriusはプロバイダー純正のツールでワークスペースを検査・編集。カスタムツールの寄せ集めは不要です。",
+        title: "940のMCPツール",
+        body: "ファイルやgitからデータベース、Office、画像、PDFまで、48のファミリーをリクエストごとに埋め込みで選択します。",
       },
       {
         n: "03",
-        label: "Skills",
-        title: "個人スキルとマルチエージェント",
-        body: "/コマンドと専門エージェントを~/siriusに保存。メッセージが一致すると起動します。",
+        label: "スキル",
+        title: "スキルとサブエージェント",
+        body: "/コマンドと専門エージェントを保存。メッセージが一致すると起動し、設定は不要です。",
       },
       {
         n: "04",
-        label: "音声",
-        title: "話して聴く",
-        body: "コンポーザーに口述し、返答を読み上げで聴く。Siriusが話している間はマイクをきれいにミュート。",
+        label: "ストリーミング",
+        title: "リアルタイムの返答",
+        body: "返答はストリーミングで届き、すべてのアクションは実行前に許可または拒否の承認を経ます。",
       },
       {
         n: "05",
         label: "仕事",
-        title: "メール、メモ、アラーム、予定",
-        body: "レールに連携をピン留め：IMAPメール、クイックメモ、アラーム、毎日のスケジュール済みプロンプト。",
+        title: "メモ、リマインダー、スケジュール",
+        body: "クイックメモ、リマインダー、アラーム、毎日のスケジュール済みプロンプトを、PC上のローカルファイルに保存します。",
       },
       {
         n: "06",
         label: "制御",
         title: "努力度、権限、Auto",
-        body: "ターンごとにフォースと権限を選ぶか、まだ性能を保つ最安モデルをAutoに任せる。",
+        body: "ターンごとに努力度と権限を選ぶか、それでも仕事を終えられる最安のモデルをAutoに選ばせます。",
       },
     ],
   },
-  providers: {
-    kicker: "星座",
-    title: "すべてのプロバイダーを一箇所に。",
-    lead: "ライブのバックエンドはすでに輝いています。残りはSoonスロットとして待機し、ネイティブSDKやCLIが揃い次第利用可能になります。",
-    ariaList: "AIプロバイダー",
-    live: "ライブ",
-    soon: "Soon",
+  models: {
+    kicker: "モデル",
+    title: "3つのモデル、1つのアシスタント。",
+    lead: "Siriusがリクエストごとに適切なモデルを選びます。モデルを管理する必要はなく、ただ頼むだけです。",
+    ariaList: "Siriusモデル",
+    items: [
+      {
+        name: "Sirius 1",
+        tier: "高速",
+        body: "チャットや軽いタスク向け。短く、安価で、待ち時間のない返答。",
+      },
+      {
+        name: "Sirius 2",
+        tier: "バランス",
+        body: "日常の標準：ファイル、ターミナル、データ、ドキュメントに対応し、コストと品質のバランスが取れています。",
+      },
+      {
+        name: "Sirius 3",
+        tier: "最も高性能",
+        body: "推論や多段階のフロー向け。本当に必要なときにだけ呼び出されます。",
+      },
+    ],
   },
   principles: {
     kicker: "原則",
@@ -80,23 +95,23 @@ const ja: Dictionary = {
       {
         kicker: "01 · キー",
         title: "あなたのマシンに留まる",
-        body: "APIキーはOSのキーリングに保存。モデルはネイティブSDKとCLI経由でローカル実行。",
+        body: "APIキーはPC上に留まります。アプリはWindowsネイティブで、ブラウザも公開ポートもありません。",
       },
       {
         kicker: "02 · 努力度",
         title: "必要な分だけ使う",
-        body: "努力度、権限、Autoルーティングが、仕事を終えられる最安の道を選びます。",
+        body: "努力度、権限、Autoルーティングが、それでも結果を出せる最安の道を選びます。",
       },
       {
         kicker: "03 · フォーカス",
         title: "静かに働ける場所",
-        body: "Starfield、orb、Space Grotesk。デスクトップは混雑したダッシュボードではなく、夜のように開きます。",
+        body: "Space Groteskを用いたクリーンなインターフェース。デスクトップは混雑したダッシュボードではなく、集中を保ちます。",
       },
     ],
   },
   cta: {
     brand: "Sirius",
-    lead: "Windowsにインストール。キーを貼り付け。Forceの下で助けを求める。",
+    lead: "Windowsにインストール。キーを貼り付け。助けを求める。",
     button: "近日公開",
     mailSubject: "Siriusのダウンロード",
   },
