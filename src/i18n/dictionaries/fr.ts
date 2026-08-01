@@ -4,7 +4,7 @@ const fr: Dictionary = {
   meta: {
     title: "Sirius - Votre agent IA local pour Windows",
     description:
-      "Sirius est un agent IA de bureau qui s’exécute sur votre PC avec vos propres clés API. Trois modèles Sirius, 940 outils MCP et une approbation par action, sur votre PC et sous votre contrôle.",
+      "Sirius est un agent IA de bureau qui s’exécute sur votre PC. Trois modèles Sirius, 940 outils MCP et une approbation par action, sur votre PC et sous votre contrôle.",
   },
   nav: {
     features: "Fonctionnalités",
@@ -18,7 +18,7 @@ const fr: Dictionary = {
     brand: "Sirius",
     title: "Votre agent IA local",
     titleMuted: " pour Windows.",
-    lead: "Un agent de bureau pour Windows qui code, modifie des fichiers et organise votre travail avec 940 outils natifs et vos propres clés API.",
+    lead: "Un agent de bureau pour Windows qui code, modifie des fichiers et organise votre travail avec 940 outils natifs, directement sur votre machine.",
     ctaPrimary: "Bientôt",
     ctaSecondary: "Voir les capacités",
   },
@@ -31,7 +31,7 @@ const fr: Dictionary = {
         n: "01",
         label: "Agent",
         title: "IA locale sur votre PC",
-        body: "Trois modèles Sirius s’exécutent avec votre clé API et sont choisis automatiquement pour chaque tâche. Vous demandez, Sirius s’en occupe.",
+        body: "Trois modèles Sirius s’exécutent sur votre machine et sont choisis automatiquement pour chaque tâche. Vous demandez, Sirius s’en occupe.",
       },
       {
         n: "02",
@@ -93,9 +93,9 @@ const fr: Dictionary = {
     title: "Conçu comme l’app que vous ouvrez déjà.",
     items: [
       {
-        kicker: "01 · Clés",
+        kicker: "01 · Local",
         title: "Tout reste sur votre machine",
-        body: "Votre clé API reste sur votre PC. L’app est native à Windows, sans navigateur et sans port publié.",
+        body: "Sirius est une app native à Windows qui s’exécute sur votre PC, sans navigateur et sans port publié.",
       },
       {
         kicker: "02 · Effort",
@@ -111,7 +111,7 @@ const fr: Dictionary = {
   },
   cta: {
     brand: "Sirius",
-    lead: "Installez sur Windows. Collez votre clé. Demandez de l’aide.",
+    lead: "Installez sur Windows. Ouvrez-le. Demandez de l’aide.",
     button: "Bientôt",
     mailSubject: "Téléchargement de Sirius",
   },

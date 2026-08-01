@@ -4,7 +4,7 @@ const ja: Dictionary = {
   meta: {
     title: "Sirius - Windows向けのローカルAIエージェント",
     description:
-      "Siriusは、ご自身のAPIキーでPC上で動作するデスクトップAIエージェントです。3つのSiriusモデル、940のMCPツール、アクションごとの承認。あなたのPC上で、あなたの管理下に。",
+      "Siriusは、PC上で動作するデスクトップAIエージェントです。3つのSiriusモデル、940のMCPツール、アクションごとの承認。あなたのPC上で、あなたの管理下に。",
   },
   nav: {
     features: "機能",
@@ -18,7 +18,7 @@ const ja: Dictionary = {
     brand: "Sirius",
     title: "あなたのローカルAIエージェント",
     titleMuted: "（Windows向け）。",
-    lead: "940のネイティブツールとご自身のAPIキーで、コードを書き、ファイルを編集し、作業を整理するWindows向けデスクトップエージェント。",
+    lead: "940のネイティブツールで、コードを書き、ファイルを編集し、作業を整理するWindows向けデスクトップエージェント。すべてあなたのマシン上で。",
     ctaPrimary: "近日公開",
     ctaSecondary: "機能を見る",
   },
@@ -31,7 +31,7 @@ const ja: Dictionary = {
         n: "01",
         label: "エージェント",
         title: "PC上のローカルAI",
-        body: "3つのSiriusモデルがご自身のAPIキーで動作し、タスクごとに自動で選ばれます。頼めば、Siriusが対応します。",
+        body: "3つのSiriusモデルがあなたのマシン上で動作し、タスクごとに自動で選ばれます。頼めば、Siriusが対応します。",
       },
       {
         n: "02",
@@ -93,9 +93,9 @@ const ja: Dictionary = {
     title: "すでに開いているアプリのように作られています。",
     items: [
       {
-        kicker: "01 · キー",
+        kicker: "01 · ローカル",
         title: "あなたのマシンに留まる",
-        body: "APIキーはPC上に留まります。アプリはWindowsネイティブで、ブラウザも公開ポートもありません。",
+        body: "SiriusはPC上で動作するWindowsネイティブアプリで、ブラウザも公開ポートもありません。",
       },
       {
         kicker: "02 · 努力度",
@@ -111,7 +111,7 @@ const ja: Dictionary = {
   },
   cta: {
     brand: "Sirius",
-    lead: "Windowsにインストール。キーを貼り付け。助けを求める。",
+    lead: "Windowsにインストール。開く。助けを求める。",
     button: "近日公開",
     mailSubject: "Siriusのダウンロード",
   },

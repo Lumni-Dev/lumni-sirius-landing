@@ -4,7 +4,7 @@ const pt: Dictionary = {
   meta: {
     title: "Sirius - Seu agente de IA local para Windows",
     description:
-      "Sirius é um agente de IA para desktop que roda no seu PC com a sua própria chave de API. Três modelos Sirius, 940 ferramentas MCP e aprovação de cada ação, no seu PC e sob o seu controle.",
+      "Sirius é um agente de IA para desktop que roda no seu PC. Três modelos Sirius, 940 ferramentas MCP e aprovação de cada ação, no seu PC e sob o seu controle.",
   },
   nav: {
     features: "Recursos",
@@ -18,7 +18,7 @@ const pt: Dictionary = {
     brand: "Sirius",
     title: "Seu agente de IA local",
     titleMuted: " para Windows.",
-    lead: "Um agente desktop para Windows que programa, edita arquivos e organiza o seu trabalho com 940 ferramentas nativas e a sua própria chave de API.",
+    lead: "Um agente desktop para Windows que programa, edita arquivos e organiza o seu trabalho com 940 ferramentas nativas, direto na sua máquina.",
     ctaPrimary: "Em breve",
     ctaSecondary: "Ver capacidades",
   },
@@ -31,7 +31,7 @@ const pt: Dictionary = {
         n: "01",
         label: "Agente",
         title: "IA local no seu PC",
-        body: "Três modelos Sirius rodam com a sua chave de API e são escolhidos automaticamente conforme a tarefa. Você pede, o Sirius resolve.",
+        body: "Três modelos Sirius rodam na sua máquina e são escolhidos automaticamente conforme a tarefa. Você pede, o Sirius resolve.",
       },
       {
         n: "02",
@@ -93,9 +93,9 @@ const pt: Dictionary = {
     title: "Feito como o app que você já abre.",
     items: [
       {
-        kicker: "01 · Chaves",
+        kicker: "01 · Local",
         title: "Fica na sua máquina",
-        body: "A sua chave de API fica no seu PC. O app é nativo de Windows, sem navegador e sem porta publicada.",
+        body: "O Sirius é um app nativo de Windows que roda no seu PC, sem navegador e sem porta publicada.",
       },
       {
         kicker: "02 · Esforço",
@@ -111,7 +111,7 @@ const pt: Dictionary = {
   },
   cta: {
     brand: "Sirius",
-    lead: "Instale no Windows. Cole a sua chave. Peça ajuda.",
+    lead: "Instale no Windows. Abra. Peça ajuda.",
     button: "Em breve",
     mailSubject: "Download do Sirius",
   },

@@ -4,7 +4,7 @@ const en: Dictionary = {
   meta: {
     title: "Sirius - Your local AI agent for Windows",
     description:
-      "Sirius is a desktop AI agent that runs on your PC with your own API key. Three Sirius models, 940 MCP tools and per-action approval, on your PC and under your control.",
+      "Sirius is a desktop AI agent that runs on your PC. Three Sirius models, 940 MCP tools and per-action approval, on your PC and under your control.",
   },
   nav: {
     features: "Features",
@@ -18,7 +18,7 @@ const en: Dictionary = {
     brand: "Sirius",
     title: "Your local AI agent",
     titleMuted: " for Windows.",
-    lead: "A desktop agent for Windows that codes, edits files and organizes your work with 940 native tools and your own API key.",
+    lead: "A desktop agent for Windows that codes, edits files and organizes your work with 940 native tools, right on your machine.",
     ctaPrimary: "Coming soon",
     ctaSecondary: "See capabilities",
   },
@@ -31,7 +31,7 @@ const en: Dictionary = {
         n: "01",
         label: "Agent",
         title: "Local AI on your PC",
-        body: "Three Sirius models run with your API key and are picked automatically for each task. You ask, Sirius handles it.",
+        body: "Three Sirius models run on your machine and are picked automatically for each task. You ask, Sirius handles it.",
       },
       {
         n: "02",
@@ -93,9 +93,9 @@ const en: Dictionary = {
     title: "Built like the app you already open.",
     items: [
       {
-        kicker: "01 · Keys",
+        kicker: "01 · Local",
         title: "It stays on your machine",
-        body: "Your API key stays on your PC. The app is native to Windows, with no browser and no published port.",
+        body: "Sirius is a native Windows app that runs on your PC, with no browser and no published port.",
       },
       {
         kicker: "02 · Effort",
@@ -111,7 +111,7 @@ const en: Dictionary = {
   },
   cta: {
     brand: "Sirius",
-    lead: "Install on Windows. Paste your key. Ask for help.",
+    lead: "Install on Windows. Open it. Ask for help.",
     button: "Coming soon",
     mailSubject: "Sirius download",
   },

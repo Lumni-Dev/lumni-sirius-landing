@@ -4,7 +4,7 @@ const de: Dictionary = {
   meta: {
     title: "Sirius - Dein lokaler KI-Agent für Windows",
     description:
-      "Sirius ist ein Desktop-KI-Agent, der auf deinem PC mit deinem eigenen API-Key läuft. Drei Sirius-Modelle, 940 MCP-Tools und Freigabe pro Aktion, auf deinem PC und unter deiner Kontrolle.",
+      "Sirius ist ein Desktop-KI-Agent, der auf deinem PC läuft. Drei Sirius-Modelle, 940 MCP-Tools und Freigabe pro Aktion, auf deinem PC und unter deiner Kontrolle.",
   },
   nav: {
     features: "Funktionen",
@@ -18,7 +18,7 @@ const de: Dictionary = {
     brand: "Sirius",
     title: "Dein lokaler KI-Agent",
     titleMuted: " für Windows.",
-    lead: "Ein Desktop-Agent für Windows, der programmiert, Dateien bearbeitet und deine Arbeit organisiert, mit 940 nativen Tools und deinem eigenen API-Key.",
+    lead: "Ein Desktop-Agent für Windows, der programmiert, Dateien bearbeitet und deine Arbeit organisiert, mit 940 nativen Tools, direkt auf deiner Maschine.",
     ctaPrimary: "Demnächst",
     ctaSecondary: "Fähigkeiten ansehen",
   },
@@ -31,7 +31,7 @@ const de: Dictionary = {
         n: "01",
         label: "Agent",
         title: "Lokale KI auf deinem PC",
-        body: "Drei Sirius-Modelle laufen mit deinem API-Key und werden für jede Aufgabe automatisch ausgewählt. Du fragst, Sirius erledigt es.",
+        body: "Drei Sirius-Modelle laufen auf deiner Maschine und werden für jede Aufgabe automatisch ausgewählt. Du fragst, Sirius erledigt es.",
       },
       {
         n: "02",
@@ -93,9 +93,9 @@ const de: Dictionary = {
     title: "Gebaut wie die App, die du schon öffnest.",
     items: [
       {
-        kicker: "01 · Schlüssel",
+        kicker: "01 · Lokal",
         title: "Es bleibt auf deiner Maschine",
-        body: "Dein API-Key bleibt auf deinem PC. Die App ist nativ für Windows, ohne Browser und ohne veröffentlichten Port.",
+        body: "Sirius ist eine native Windows-App, die auf deinem PC läuft, ohne Browser und ohne veröffentlichten Port.",
       },
       {
         kicker: "02 · Aufwand",
@@ -111,7 +111,7 @@ const de: Dictionary = {
   },
   cta: {
     brand: "Sirius",
-    lead: "Auf Windows installieren. Key einfügen. Um Hilfe bitten.",
+    lead: "Auf Windows installieren. Öffnen. Um Hilfe bitten.",
     button: "Demnächst",
     mailSubject: "Sirius-Download",
   },

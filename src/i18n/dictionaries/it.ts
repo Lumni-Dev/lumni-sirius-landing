@@ -4,7 +4,7 @@ const it: Dictionary = {
   meta: {
     title: "Sirius - Il tuo agente IA locale per Windows",
     description:
-      "Sirius è un agente IA desktop che gira sul tuo PC con le tue chiavi API. Tre modelli Sirius, 940 strumenti MCP e approvazione per ogni azione, sul tuo PC e sotto il tuo controllo.",
+      "Sirius è un agente IA desktop che gira sul tuo PC. Tre modelli Sirius, 940 strumenti MCP e approvazione per ogni azione, sul tuo PC e sotto il tuo controllo.",
   },
   nav: {
     features: "Funzionalità",
@@ -18,7 +18,7 @@ const it: Dictionary = {
     brand: "Sirius",
     title: "Il tuo agente IA locale",
     titleMuted: " per Windows.",
-    lead: "Un agente desktop per Windows che programma, modifica file e organizza il tuo lavoro con 940 strumenti nativi e le tue chiavi API.",
+    lead: "Un agente desktop per Windows che programma, modifica file e organizza il tuo lavoro con 940 strumenti nativi, direttamente sulla tua macchina.",
     ctaPrimary: "Prossimamente",
     ctaSecondary: "Vedi le funzionalità",
   },
@@ -31,7 +31,7 @@ const it: Dictionary = {
         n: "01",
         label: "Agente",
         title: "IA locale sul tuo PC",
-        body: "Tre modelli Sirius girano con le tue chiavi API e vengono scelti automaticamente per ogni compito. Tu chiedi, Sirius se ne occupa.",
+        body: "Tre modelli Sirius girano sulla tua macchina e vengono scelti automaticamente per ogni compito. Tu chiedi, Sirius se ne occupa.",
       },
       {
         n: "02",
@@ -93,9 +93,9 @@ const it: Dictionary = {
     title: "Costruito come l'app che apri già.",
     items: [
       {
-        kicker: "01 · Chiavi",
+        kicker: "01 · Locale",
         title: "Resta sulla tua macchina",
-        body: "Le tue chiavi API restano sul tuo PC. L'app è nativa per Windows, senza browser e senza porta pubblicata.",
+        body: "Sirius è un'app nativa per Windows che gira sul tuo PC, senza browser e senza porta pubblicata.",
       },
       {
         kicker: "02 · Sforzo",
@@ -111,7 +111,7 @@ const it: Dictionary = {
   },
   cta: {
     brand: "Sirius",
-    lead: "Installa su Windows. Incolla la chiave. Chiedi aiuto.",
+    lead: "Installa su Windows. Aprilo. Chiedi aiuto.",
     button: "Prossimamente",
     mailSubject: "Download di Sirius",
   },
