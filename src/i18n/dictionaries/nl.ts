@@ -1,14 +1,14 @@
-﻿import type { Dictionary } from "@/i18n/types";
+import type { Dictionary } from "@/i18n/types";
 
 const nl: Dictionary = {
   meta: {
     title: "Sirius - Jouw lokale AI-agent voor Windows",
     description:
-      "Sirius is een desktop-AI-agent die op je pc draait met je eigen API-sleutels. Code, skills, stem, e-mail en meer — lokaal en onder jouw controle.",
+      "Sirius is een desktop-AI-agent die op je pc draait met je eigen API-sleutel. Drie Sirius-modellen, 940 MCP-tools en goedkeuring per actie, op je pc en onder jouw controle.",
   },
   nav: {
     features: "Functies",
-    providers: "Providers",
+    models: "Modellen",
     principles: "Principes",
     download: "Binnenkort",
     ariaPrimary: "Primair",
@@ -17,61 +17,76 @@ const nl: Dictionary = {
   hero: {
     brand: "Sirius",
     title: "Jouw lokale AI-agent",
-    titleMuted: "  voor Windows.",
-    lead: "Een Windows-desktopagent die codeert, spreekt en organiseert met native tools en je eigen API-sleutels.",
+    titleMuted: " voor Windows.",
+    lead: "Een desktopagent voor Windows die codeert, bestanden bewerkt en je werk organiseert met 940 native tools en je eigen API-sleutel.",
     ctaPrimary: "Binnenkort",
     ctaSecondary: "Bekijk mogelijkheden",
   },
   features: {
     kicker: "Mogelijkheden",
     title: "Wat Sirius naar je bureau brengt.",
-    lead: "Eén compositie voor werk: chat, tools en integraties, zonder je desktop in een dashboard-collage te veranderen.",
+    lead: "Eén compositie voor echt werk: chat, tools en integraties, zonder je desktop in een collage van panelen te veranderen.",
     items: [
       {
         n: "01",
         label: "Agent",
         title: "Lokale AI op je pc",
-        body: "Claude, GPT, Gemini, DeepSeek en meer draaien op je machine met je eigen API-sleutels. Soon-slots dekken de rest van de catalogus.",
+        body: "Drie Sirius-modellen draaien met je API-sleutel en worden automatisch gekozen voor elke taak. Jij vraagt, Sirius regelt het.",
       },
       {
         n: "02",
         label: "Tools",
-        title: "Shell, bestanden en patches",
-        body: "Sirius inspecteert en bewerkt je workspace met de eigen tools van de provider. Geen soep van custom tools.",
+        title: "940 MCP-tools",
+        body: "48 families, van bestanden en git tot databases, Office, afbeeldingen en PDF's, geselecteerd via embeddings bij elk verzoek.",
       },
       {
         n: "03",
         label: "Skills",
-        title: "Persoonlijke skills & multi-agents",
-        body: "Sla /commando’s en specialistische agents op onder ~/sirius. Ze activeren wanneer je bericht matcht.",
+        title: "Skills en subagents",
+        body: "Bewaar /commando's en specialistische agents. Ze activeren wanneer je bericht matcht, zonder iets in te stellen.",
       },
       {
         n: "04",
-        label: "Stem",
-        title: "Praten en luisteren",
-        body: "Dicteer in de composer en hoor antwoorden voorgelezen, microfoon netjes dempt terwijl Sirius spreekt.",
+        label: "Streaming",
+        title: "Live antwoorden",
+        body: "Antwoorden komen binnen via streaming en elke actie gaat door een Toestaan- of Weigeren-goedkeuring voordat ze draait.",
       },
       {
         n: "05",
         label: "Werk",
-        title: "E-mail, notities, alarmen, schema’s",
-        body: "Pin integraties op de rail: IMAP-mail, snelle notities, alarmen en dagelijkse geplande prompts.",
+        title: "Notities, herinneringen, schema's",
+        body: "Snelle notities, herinneringen, alarmen en dagelijks geplande prompts, bewaard in lokale bestanden op je pc.",
       },
       {
         n: "06",
         label: "Controle",
         title: "Inspanning, rechten, Auto",
-        body: "Kies force en rechten per beurt, of laat Auto het goedkoopste model kiezen dat nog presteert.",
+        body: "Kies inspanning en rechten per beurt, of laat Auto het goedkoopste model kiezen dat de klus nog klaart.",
       },
     ],
   },
-  providers: {
-    kicker: "Providers",
-    title: "Elke provider op één plek.",
-    lead: "Live backends schijnen nu. De rest wacht als Soon-slots, klaar wanneer hun native SDK of CLI landt.",
-    ariaList: "AI-providers",
-    live: "Live",
-    soon: "Soon",
+  models: {
+    kicker: "Modellen",
+    title: "Drie modellen, één assistent.",
+    lead: "Sirius kiest het juiste model voor elk verzoek. Je beheert nooit een model, je vraagt gewoon.",
+    ariaList: "Sirius-modellen",
+    items: [
+      {
+        name: "Sirius 1",
+        tier: "Snel",
+        body: "Voor chat en lichte taken. Korte, goedkope antwoorden zonder wachttijd.",
+      },
+      {
+        name: "Sirius 2",
+        tier: "Gebalanceerd",
+        body: "De dagelijkse standaard: bestanden, terminal, data en documenten, met een stevige balans tussen kosten en kwaliteit.",
+      },
+      {
+        name: "Sirius 3",
+        tier: "Meest capabel",
+        body: "Voor redeneren en flows met veel stappen, alleen aangeroepen wanneer de taak het echt nodig heeft.",
+      },
+    ],
   },
   principles: {
     kicker: "Principes",
@@ -79,18 +94,18 @@ const nl: Dictionary = {
     items: [
       {
         kicker: "01 · Sleutels",
-        title: "Blijf op je machine",
-        body: "API-sleutels leven in de OS-keyring. Het model draait lokaal via native SDK’s en CLI’s.",
+        title: "Het blijft op je machine",
+        body: "Je API-sleutel blijft op je pc. De app is native voor Windows, zonder browser en zonder gepubliceerde poort.",
       },
       {
         kicker: "02 · Inspanning",
         title: "Besteed alleen wat nodig is",
-        body: "Inspanning, rechten en Auto-routing kiezen het goedkoopste pad dat de klus nog klaart.",
+        body: "Inspanning, rechten en Auto-routing kiezen het goedkoopste pad dat het resultaat nog levert.",
       },
       {
         kicker: "03 · Focus",
         title: "Een stille plek om te werken",
-        body: "Strakke interface met Space Grotesk. De desktop blijft gefocust, geen vol dashboard.",
+        body: "Een strakke interface met Space Grotesk. De desktop blijft gefocust, geen vol dashboard.",
       },
     ],
   },

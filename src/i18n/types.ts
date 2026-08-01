@@ -11,6 +11,12 @@ export interface PrincipleCopy {
   readonly body: string;
 }
 
+export interface ModelCopy {
+  readonly name: string;
+  readonly tier: string;
+  readonly body: string;
+}
+
 export interface Dictionary {
   readonly meta: {
     readonly title: string;
@@ -18,7 +24,7 @@ export interface Dictionary {
   };
   readonly nav: {
     readonly features: string;
-    readonly providers: string;
+    readonly models: string;
     readonly principles: string;
     readonly download: string;
     readonly ariaPrimary: string;
@@ -38,13 +44,12 @@ export interface Dictionary {
     readonly lead: string;
     readonly items: readonly FeatureCopy[];
   };
-  readonly providers: {
+  readonly models: {
     readonly kicker: string;
     readonly title: string;
     readonly lead: string;
     readonly ariaList: string;
-    readonly live: string;
-    readonly soon: string;
+    readonly items: readonly ModelCopy[];
   };
   readonly principles: {
     readonly kicker: string;

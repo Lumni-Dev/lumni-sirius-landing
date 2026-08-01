@@ -1,14 +1,14 @@
-﻿import type { Dictionary } from "@/i18n/types";
+import type { Dictionary } from "@/i18n/types";
 
 const pt: Dictionary = {
   meta: {
     title: "Sirius - Seu agente de IA local para Windows",
     description:
-      "Sirius é um agente de IA para desktop que roda no seu PC com as suas próprias chaves de API. Código, skills, voz, e-mail e mais — local e sob o seu controle.",
+      "Sirius é um agente de IA para desktop que roda no seu PC com a sua própria chave de API. Três modelos Sirius, 940 ferramentas MCP e aprovação de cada ação, no seu PC e sob o seu controle.",
   },
   nav: {
     features: "Recursos",
-    providers: "Provedores",
+    models: "Modelos",
     principles: "Princípios",
     download: "Em breve",
     ariaPrimary: "Principal",
@@ -18,44 +18,44 @@ const pt: Dictionary = {
     brand: "Sirius",
     title: "Seu agente de IA local",
     titleMuted: " para Windows.",
-    lead: "Um agente desktop para Windows que programa, fala e organiza com ferramentas nativas e as suas próprias chaves de API.",
+    lead: "Um agente desktop para Windows que programa, edita arquivos e organiza o seu trabalho com 940 ferramentas nativas e a sua própria chave de API.",
     ctaPrimary: "Em breve",
     ctaSecondary: "Ver capacidades",
   },
   features: {
     kicker: "Capacidades",
     title: "O que o Sirius traz para a sua mesa.",
-    lead: "Uma composição para o trabalho: chat, ferramentas e integrações, sem transformar o desktop num colagem de painéis.",
+    lead: "Uma composição para o trabalho: chat, ferramentas e integrações, sem transformar o desktop numa colagem de painéis.",
     items: [
       {
         n: "01",
         label: "Agente",
         title: "IA local no seu PC",
-        body: "Claude, GPT, Gemini, DeepSeek e mais rodam na sua máquina com as suas chaves de API. Os slots Soon cobrem o resto do catálogo.",
+        body: "Três modelos Sirius rodam com a sua chave de API e são escolhidos automaticamente conforme a tarefa. Você pede, o Sirius resolve.",
       },
       {
         n: "02",
         label: "Ferramentas",
-        title: "Shell, arquivos e patches",
-        body: "O Sirius inspeciona e edita o seu workspace com as ferramentas do próprio provedor. Sem sopa de tools customizadas.",
+        title: "940 ferramentas MCP",
+        body: "48 famílias, de arquivos e git a bancos de dados, Office, imagens e PDFs, selecionadas por embeddings a cada pedido.",
       },
       {
         n: "03",
         label: "Skills",
-        title: "Skills pessoais e multi-agentes",
-        body: "Salve /comandos e agentes especialistas em ~/sirius. Eles ativam quando a mensagem combina.",
+        title: "Skills e subagentes",
+        body: "Salve /comandos e agentes especialistas. Eles ativam quando a mensagem combina, sem configurar nada.",
       },
       {
         n: "04",
-        label: "Voz",
-        title: "Fale e ouça",
-        body: "Ditafone no composer e ouça as respostas narradas, com o microfone silenciado enquanto o Sirius fala.",
+        label: "Streaming",
+        title: "Resposta ao vivo",
+        body: "As respostas chegam em streaming e cada ação passa por uma aprovação Permitir ou Negar antes de rodar.",
       },
       {
         n: "05",
         label: "Trabalho",
-        title: "E-mail, notas, alarmes, agendas",
-        body: "Fixe integrações na rail: e-mail IMAP, notas rápidas, alarmes e prompts diários agendados.",
+        title: "Notas, lembretes, agendas",
+        body: "Notas rápidas, lembretes, alarmes e prompts diários agendados, guardados em arquivos locais no seu PC.",
       },
       {
         n: "06",
@@ -65,13 +65,28 @@ const pt: Dictionary = {
       },
     ],
   },
-  providers: {
-    kicker: "Provedores",
-    title: "Cada provedor em um só lugar.",
-    lead: "Os backends ao vivo já estão prontos. O resto espera como slots Soon, disponíveis quando o SDK ou CLI nativo chegar.",
-    ariaList: "Provedores de IA",
-    live: "Ao vivo",
-    soon: "Em breve",
+  models: {
+    kicker: "Modelos",
+    title: "Três modelos, um só assistente.",
+    lead: "O Sirius escolhe o modelo certo para cada pedido. Você não gerencia modelo nenhum, só pede.",
+    ariaList: "Modelos do Sirius",
+    items: [
+      {
+        name: "Sirius 1",
+        tier: "Rápido",
+        body: "Para conversa e tarefas leves. Respostas curtas e baratas, sem espera.",
+      },
+      {
+        name: "Sirius 2",
+        tier: "Equilibrado",
+        body: "O padrão do dia a dia: arquivos, terminal, dados e documentos, com boa relação entre custo e qualidade.",
+      },
+      {
+        name: "Sirius 3",
+        tier: "Mais capaz",
+        body: "Para raciocínio e fluxos com muitos passos, acionado só quando a tarefa realmente pede.",
+      },
+    ],
   },
   principles: {
     kicker: "Princípios",
@@ -80,7 +95,7 @@ const pt: Dictionary = {
       {
         kicker: "01 · Chaves",
         title: "Fica na sua máquina",
-        body: "As chaves de API ficam no keyring do SO. O modelo roda localmente via SDKs e CLIs nativos.",
+        body: "A sua chave de API fica no seu PC. O app é nativo de Windows, sem navegador e sem porta publicada.",
       },
       {
         kicker: "02 · Esforço",

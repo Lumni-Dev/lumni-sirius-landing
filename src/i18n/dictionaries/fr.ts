@@ -1,14 +1,14 @@
-﻿import type { Dictionary } from "@/i18n/types";
+import type { Dictionary } from "@/i18n/types";
 
 const fr: Dictionary = {
   meta: {
     title: "Sirius - Votre agent IA local pour Windows",
     description:
-      "Sirius est un agent IA de bureau qui s’exécute sur votre PC avec vos propres clés API. Code, skills, voix, e-mail et plus sous un ciel étoilé.",
+      "Sirius est un agent IA de bureau qui s’exécute sur votre PC avec vos propres clés API. Trois modèles Sirius, 940 outils MCP et une approbation par action, sur votre PC et sous votre contrôle.",
   },
   nav: {
     features: "Fonctionnalités",
-    providers: "Fournisseurs",
+    models: "Modèles",
     principles: "Principes",
     download: "Bientôt",
     ariaPrimary: "Principal",
@@ -18,60 +18,75 @@ const fr: Dictionary = {
     brand: "Sirius",
     title: "Votre agent IA local",
     titleMuted: " pour Windows.",
-    lead: "Un agent de bureau pour Windows qui code, parle et organise avec des outils natifs et vos propres clés API.",
+    lead: "Un agent de bureau pour Windows qui code, modifie des fichiers et organise votre travail avec 940 outils natifs et vos propres clés API.",
     ctaPrimary: "Bientôt",
     ctaSecondary: "Voir les capacités",
   },
   features: {
     kicker: "Capacités",
     title: "Ce que Sirius apporte à votre bureau.",
-    lead: "Une seule composition pour le travail : chat, outils et intégrations, sans transformer votre bureau en collage de tableaux de bord.",
+    lead: "Une composition pour le vrai travail : chat, outils et intégrations, sans transformer le bureau en collage de panneaux.",
     items: [
       {
         n: "01",
         label: "Agent",
         title: "IA locale sur votre PC",
-        body: "Claude, GPT, Gemini, DeepSeek et plus s’exécutent sur votre machine avec vos propres clés API. Les slots Soon couvrent le reste du catalogue.",
+        body: "Trois modèles Sirius s’exécutent avec votre clé API et sont choisis automatiquement pour chaque tâche. Vous demandez, Sirius s’en occupe.",
       },
       {
         n: "02",
         label: "Outils",
-        title: "Shell, fichiers et correctifs",
-        body: "Sirius inspecte et modifie votre workspace avec les outils propres du fournisseur. Pas de soupe d’outils custom.",
+        title: "940 outils MCP",
+        body: "48 familles, des fichiers et git aux bases de données, à Office, aux images et aux PDF, sélectionnés par embeddings à chaque requête.",
       },
       {
         n: "03",
         label: "Skills",
-        title: "Skills personnelles et multi-agents",
-        body: "Enregistrez des /commandes et des agents spécialistes dans ~/sirius. Ils s’activent quand votre message correspond.",
+        title: "Skills et sous-agents",
+        body: "Enregistrez des /commandes et des agents spécialistes. Ils s’activent quand le message correspond, sans rien à configurer.",
       },
       {
         n: "04",
-        label: "Voix",
-        title: "Parlez et écoutez",
-        body: "Dictez dans le composer et écoutez les réponses narrées, micro coupé proprement pendant que Sirius parle.",
+        label: "Streaming",
+        title: "Réponses en direct",
+        body: "Les réponses arrivent en streaming et chaque action passe par une approbation Autoriser ou Refuser avant de s’exécuter.",
       },
       {
         n: "05",
         label: "Travail",
-        title: "E-mail, notes, alarmes, plannings",
-        body: "Épinglez des intégrations sur la rail : mail IMAP, notes rapides, alarmes et prompts quotidiens planifiés.",
+        title: "Notes, rappels, plannings",
+        body: "Notes rapides, rappels, alarmes et prompts quotidiens planifiés, conservés dans des fichiers locaux sur votre PC.",
       },
       {
         n: "06",
         label: "Contrôle",
         title: "Effort, permissions, Auto",
-        body: "Choisissez force et permission à chaque tour, ou laissez Auto choisir le modèle le moins cher qui tient encore la performance.",
+        body: "Choisissez effort et permission à chaque tour, ou laissez Auto choisir le modèle le moins cher qui fait quand même le travail.",
       },
     ],
   },
-  providers: {
-    kicker: "Fournisseurs",
-    title: "Chaque fournisseur au même endroit.",
-    lead: "Les backends en ligne brillent déjà. Le reste attend en slots Soon, prêts dès que leur SDK ou CLI natif arrive.",
-    ariaList: "Fournisseurs d’IA",
-    live: "En ligne",
-    soon: "Soon",
+  models: {
+    kicker: "Modèles",
+    title: "Trois modèles, un seul assistant.",
+    lead: "Sirius choisit le bon modèle pour chaque requête. Vous ne gérez jamais un modèle, vous demandez simplement.",
+    ariaList: "Modèles Sirius",
+    items: [
+      {
+        name: "Sirius 1",
+        tier: "Rapide",
+        body: "Pour le chat et les tâches légères. Des réponses courtes, économiques et sans attente.",
+      },
+      {
+        name: "Sirius 2",
+        tier: "Équilibré",
+        body: "Le choix par défaut au quotidien : fichiers, terminal, données et documents, avec un solide équilibre entre coût et qualité.",
+      },
+      {
+        name: "Sirius 3",
+        tier: "Le plus capable",
+        body: "Pour le raisonnement et les flux à plusieurs étapes, appelé uniquement quand la tâche en a vraiment besoin.",
+      },
+    ],
   },
   principles: {
     kicker: "Principes",
@@ -79,18 +94,18 @@ const fr: Dictionary = {
     items: [
       {
         kicker: "01 · Clés",
-        title: "Restez sur votre machine",
-        body: "Les clés API vivent dans le keyring du système. Le modèle s’exécute localement via des SDK et CLI natifs.",
+        title: "Tout reste sur votre machine",
+        body: "Votre clé API reste sur votre PC. L’app est native à Windows, sans navigateur et sans port publié.",
       },
       {
         kicker: "02 · Effort",
         title: "Ne dépensez que le nécessaire",
-        body: "L’effort, les permissions et le routage Auto choisissent le chemin le moins cher qui mène encore au résultat.",
+        body: "L’effort, les permissions et le routage Auto choisissent le chemin le moins cher qui livre quand même le résultat.",
       },
       {
         kicker: "03 · Focus",
         title: "Un endroit calme pour travailler",
-        body: "Interface claire avec Space Grotesk. Le bureau reste concentré, pas un dashboard surchargé.",
+        body: "Une interface épurée avec Space Grotesk. Le bureau reste concentré, pas un tableau de bord surchargé.",
       },
     ],
   },

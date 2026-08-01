@@ -6,48 +6,6 @@ import { TopLink } from "@/components/TopLink";
 import { toLocaleCode } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 
-const PROVIDERS = [
-  { name: "Claude", status: "active" },
-  { name: "GPT", status: "active" },
-  { name: "Codex", status: "active" },
-  { name: "Gemini", status: "active" },
-  { name: "Qwen", status: "active" },
-  { name: "Grok", status: "active" },
-  { name: "DeepSeek", status: "active" },
-  { name: "Mistral", status: "active" },
-  { name: "Cohere", status: "active" },
-  { name: "Perplexity", status: "active" },
-  { name: "Together", status: "active" },
-  { name: "Fireworks", status: "active" },
-  { name: "Groq", status: "active" },
-  { name: "OpenRouter", status: "active" },
-  { name: "Llama", status: "active" },
-  { name: "Kimi", status: "active" },
-  { name: "Yi", status: "active" },
-  { name: "Phi", status: "active" },
-  { name: "Ollama", status: "active" },
-  { name: "LM Studio", status: "active" },
-  { name: "vLLM", status: "active" },
-  { name: "llama.cpp", status: "active" },
-  { name: "Sirius Minor", status: "soon" },
-  { name: "Sirius Major", status: "soon" },
-] as const;
-
-function ProviderRow({ pass }: { pass: string }) {
-  return (
-    <>
-      {PROVIDERS.map((p) => (
-        <span
-          className={`sky-name${p.status === "soon" ? " is-soon" : " is-live"}`}
-          key={`${pass}-${p.name}`}
-        >
-          {p.name}
-        </span>
-      ))}
-    </>
-  );
-}
-
 interface HomePageProps {
   params: Promise<{ locale: string }>;
 }
@@ -76,7 +34,7 @@ export default async function HomePage({ params }: HomePageProps) {
                     <a href="#features">{dict.nav.features}</a>
                   </li>
                   <li>
-                    <a href="#providers">{dict.nav.providers}</a>
+                    <a href="#models">{dict.nav.models}</a>
                   </li>
                   <li>
                     <a href="#principles">{dict.nav.principles}</a>
@@ -142,30 +100,22 @@ export default async function HomePage({ params }: HomePageProps) {
             </ol>
           </section>
 
-          <section
-            className="section section-sky"
-            id="providers"
-            aria-labelledby="providers-title"
-          >
+          <section className="section" id="models" aria-labelledby="models-title">
             <div className="section-head">
-              <p className="section-kicker">{dict.providers.kicker}</p>
-              <h2 id="providers-title">{dict.providers.title}</h2>
-              <p className="section-lead">{dict.providers.lead}</p>
+              <p className="section-kicker">{dict.models.kicker}</p>
+              <h2 id="models-title">{dict.models.title}</h2>
+              <p className="section-lead">{dict.models.lead}</p>
             </div>
 
-            <div className="sky-band" aria-label={dict.providers.ariaList}>
-              <div className="sky-track">
-                <ProviderRow pass="a" />
-                <span className="sky-track-dup" aria-hidden="true">
-                  <ProviderRow pass="b" />
-                </span>
-              </div>
+            <div className="principles" aria-label={dict.models.ariaList}>
+              {dict.models.items.map((m) => (
+                <article className="principle" key={m.name}>
+                  <p className="principle-kicker">{m.tier}</p>
+                  <h3>{m.name}</h3>
+                  <p>{m.body}</p>
+                </article>
+              ))}
             </div>
-
-            <p className="sky-legend">
-              <span className="sky-legend-live">{dict.providers.live}</span>
-              <span className="sky-legend-soon">{dict.providers.soon}</span>
-            </p>
           </section>
 
           <section

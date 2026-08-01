@@ -1,14 +1,14 @@
-﻿import type { Dictionary } from "@/i18n/types";
+import type { Dictionary } from "@/i18n/types";
 
 const de: Dictionary = {
   meta: {
     title: "Sirius - Dein lokaler KI-Agent für Windows",
     description:
-      "Sirius ist ein Desktop-KI-Agent, der auf deinem PC mit deinen eigenen API-Keys läuft. Code, Skills, Stimme, E-Mail und mehr unter einem ruhigen Sternenhimmel.",
+      "Sirius ist ein Desktop-KI-Agent, der auf deinem PC mit deinem eigenen API-Key läuft. Drei Sirius-Modelle, 940 MCP-Tools und Freigabe pro Aktion, auf deinem PC und unter deiner Kontrolle.",
   },
   nav: {
     features: "Funktionen",
-    providers: "Anbieter",
+    models: "Modelle",
     principles: "Prinzipien",
     download: "Demnächst",
     ariaPrimary: "Primär",
@@ -17,61 +17,76 @@ const de: Dictionary = {
   hero: {
     brand: "Sirius",
     title: "Dein lokaler KI-Agent",
-    titleMuted: "  für Windows.",
-    lead: "Ein Windows-Desktop-Agent, der mit nativen Tools und deinen eigenen API-Keys programmiert, spricht und organisiert.",
+    titleMuted: " für Windows.",
+    lead: "Ein Desktop-Agent für Windows, der programmiert, Dateien bearbeitet und deine Arbeit organisiert, mit 940 nativen Tools und deinem eigenen API-Key.",
     ctaPrimary: "Demnächst",
-    ctaSecondary: "Funktionen ansehen",
+    ctaSecondary: "Fähigkeiten ansehen",
   },
   features: {
     kicker: "Fähigkeiten",
     title: "Was Sirius auf deinen Schreibtisch bringt.",
-    lead: "Eine Komposition für die Arbeit: Chat, Tools und Integrationen — ohne deinen Desktop in ein Dashboard-Collage zu verwandeln.",
+    lead: "Eine Komposition für echte Arbeit: Chat, Tools und Integrationen, ohne den Desktop in eine Collage aus Panels zu verwandeln.",
     items: [
       {
         n: "01",
         label: "Agent",
         title: "Lokale KI auf deinem PC",
-        body: "Claude, GPT, Gemini, DeepSeek und mehr laufen auf deiner Maschine mit deinen eigenen API-Keys. Soon-Slots decken den Rest des Katalogs ab.",
+        body: "Drei Sirius-Modelle laufen mit deinem API-Key und werden für jede Aufgabe automatisch ausgewählt. Du fragst, Sirius erledigt es.",
       },
       {
         n: "02",
         label: "Tools",
-        title: "Shell, Dateien und Patches",
-        body: "Sirius prüft und bearbeitet deinen Workspace mit den eigenen Tools des Anbieters. Keine selbstgebaute Tool-Suppe.",
+        title: "940 MCP-Tools",
+        body: "48 Familien, von Dateien und git bis zu Datenbanken, Office, Bildern und PDFs, bei jeder Anfrage per Embeddings ausgewählt.",
       },
       {
         n: "03",
         label: "Skills",
-        title: "Persönliche Skills & Multi-Agents",
-        body: "Speichere /Befehle und Spezialisten-Agents unter ~/sirius. Sie aktivieren sich, wenn deine Nachricht passt.",
+        title: "Skills und Subagenten",
+        body: "Speichere /Befehle und spezialisierte Agenten. Sie aktivieren sich, wenn die Nachricht passt, ganz ohne Konfiguration.",
       },
       {
         n: "04",
-        label: "Stimme",
-        title: "Sprechen und zuhören",
-        body: "Diktiere in den Composer und höre Antworten vorgelesen — Mikrofon sauber stumm, während Sirius spricht.",
+        label: "Streaming",
+        title: "Live-Antworten",
+        body: "Antworten kommen im Streaming an, und jede Aktion durchläuft vor der Ausführung eine Freigabe mit Erlauben oder Ablehnen.",
       },
       {
         n: "05",
         label: "Arbeit",
-        title: "E-Mail, Notizen, Alarme, Pläne",
-        body: "Pinne Integrationen an die Rail: IMAP-Mail, Schnellnotizen, Alarme und täglich geplante Prompts.",
+        title: "Notizen, Erinnerungen, Zeitpläne",
+        body: "Schnellnotizen, Erinnerungen, Alarme und täglich geplante Prompts, gespeichert in lokalen Dateien auf deinem PC.",
       },
       {
         n: "06",
         label: "Kontrolle",
         title: "Aufwand, Berechtigungen, Auto",
-        body: "Wähle Force und Berechtigung pro Turn, oder lass Auto das günstigste Modell wählen, das trotzdem liefert.",
+        body: "Wähle Aufwand und Berechtigung pro Turn, oder lass Auto das günstigste Modell wählen, das die Aufgabe trotzdem erledigt.",
       },
     ],
   },
-  providers: {
-    kicker: "Konstellation",
-    title: "Jeder Anbieter an einem Ort.",
-    lead: "Live-Backends leuchten jetzt. Der Rest wartet als Soon-Slots, bereit wenn ihr natives SDK oder CLI kommt.",
-    ariaList: "KI-Anbieter",
-    live: "Live",
-    soon: "Soon",
+  models: {
+    kicker: "Modelle",
+    title: "Drei Modelle, ein Assistent.",
+    lead: "Sirius wählt das richtige Modell für jede Anfrage. Du verwaltest nie ein Modell, du fragst einfach.",
+    ariaList: "Sirius-Modelle",
+    items: [
+      {
+        name: "Sirius 1",
+        tier: "Schnell",
+        body: "Für Chat und leichte Aufgaben. Kurze, günstige Antworten ohne Wartezeit.",
+      },
+      {
+        name: "Sirius 2",
+        tier: "Ausgewogen",
+        body: "Der Alltagsstandard: Dateien, Terminal, Daten und Dokumente, mit einem soliden Gleichgewicht aus Kosten und Qualität.",
+      },
+      {
+        name: "Sirius 3",
+        tier: "Am leistungsfähigsten",
+        body: "Für Reasoning und mehrstufige Abläufe, nur aufgerufen, wenn die Aufgabe es wirklich braucht.",
+      },
+    ],
   },
   principles: {
     kicker: "Prinzipien",
@@ -79,24 +94,24 @@ const de: Dictionary = {
     items: [
       {
         kicker: "01 · Schlüssel",
-        title: "Bleib auf deiner Maschine",
-        body: "API-Keys liegen im OS-Keyring. Das Modell läuft lokal über native SDKs und CLIs.",
+        title: "Es bleibt auf deiner Maschine",
+        body: "Dein API-Key bleibt auf deinem PC. Die App ist nativ für Windows, ohne Browser und ohne veröffentlichten Port.",
       },
       {
         kicker: "02 · Aufwand",
         title: "Gib nur aus, was nötig ist",
-        body: "Aufwand, Berechtigungen und Auto-Routing wählen den günstigsten Weg, der die Aufgabe trotzdem erledigt.",
+        body: "Aufwand, Berechtigungen und Auto-Routing wählen den günstigsten Weg, der das Ergebnis trotzdem liefert.",
       },
       {
         kicker: "03 · Fokus",
         title: "Ein ruhiger Ort zum Arbeiten",
-        body: "Starfield, Orb und Space Grotesk. Der Desktop öffnet sich wie die Nacht — nicht wie ein überfülltes Dashboard.",
+        body: "Eine klare Oberfläche mit Space Grotesk. Der Desktop bleibt fokussiert, kein überfülltes Dashboard.",
       },
     ],
   },
   cta: {
     brand: "Sirius",
-    lead: "Auf Windows installieren. Key einfügen. Unter der Force um Hilfe bitten.",
+    lead: "Auf Windows installieren. Key einfügen. Um Hilfe bitten.",
     button: "Demnächst",
     mailSubject: "Sirius-Download",
   },
