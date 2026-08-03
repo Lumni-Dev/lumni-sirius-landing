@@ -459,7 +459,8 @@
   }
 
   function buildScene() {
-    mainMat = makeStarMaterial(20.0, 0.0);
+    // Wander leve: movimento sutil das partículas (vivo, sem a "vibração" dos 0.12).
+    mainMat = makeStarMaterial(20.0, 0.035);
     const mainGeo = makeStarGeometry(0.92, 0.34, 2600, 800, 500, 0.035);
     mainGroup = new THREE.Group();
     mainGroup.position.copy(CENTER);
