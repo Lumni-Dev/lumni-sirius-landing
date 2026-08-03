@@ -670,9 +670,14 @@
     // getBoundingClientRect offset — that grew/shrank overscan while
     // scrolling and made the star look like it was zooming.
     const halfW = Math.max(vw / 2, w / 2) + CANVAS_PAD;
-    const halfH = Math.max(vh / 2, h / 2) + CANVAS_PAD;
+    // refHalfH (tamanho ~viewport) define o enquadramento da estrela; o canvas
+    // real ganha margem vertical extra para o brilho/halo nunca ser cortado na
+    // borda de baixo enquanto o hero rola (o bug da "faixa").
+    const refHalfH = Math.max(vh / 2, h / 2) + CANVAS_PAD;
+    const halfH = refHalfH + vh * 0.5;
     const rw = Math.max(1, Math.ceil(halfW * 2));
     const rh = Math.max(1, Math.ceil(halfH * 2));
+    const refRh = Math.max(1, Math.ceil(refHalfH * 2));
     const key = `${rw}x${rh}@${w}x${h}`;
     if (key === lastResizeKey) {
       placeCanvas();
@@ -687,11 +692,11 @@
     canvas.style.height = `${rh}px`;
     placeCanvas();
 
-    // Afastar a câmera na proporção do overscan (mantém enquadramento do stage)
-    // e ORB_FRAME aproxima um pouco para a estrela ficar maior.
-    const overscan = Math.max(rw / w, rh / h, 1);
+    // Enquadramento pela referência (viewport); depois compensa a altura extra
+    // do canvas (rh/refRh) para a estrela manter exatamente o mesmo tamanho.
+    const overscan = Math.max(rw / w, refRh / h, 1);
     camera.fov = BASE_FOV;
-    camera.position.z = BASE_CAM_Z * overscan * ORB_FRAME;
+    camera.position.z = BASE_CAM_Z * overscan * ORB_FRAME * (rh / refRh);
     camera.aspect = rw / rh;
     camera.updateProjectionMatrix();
     shared.uPixelRatio.value = Math.min(window.devicePixelRatio || 1, 1.75);
