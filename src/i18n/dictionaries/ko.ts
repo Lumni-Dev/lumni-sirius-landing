@@ -72,17 +72,17 @@ const ko: Dictionary = {
     ariaList: "Sirius 모델",
     items: [
       {
-        name: "Sirius 1",
+        name: "Sirius A",
         tier: "빠름",
         body: "채팅과 가벼운 작업용. 짧고 저렴한 답변을 기다림 없이 제공합니다.",
       },
       {
-        name: "Sirius 2",
+        name: "Sirius B",
         tier: "균형",
         body: "일상의 기본값: 파일, 터미널, 데이터, 문서를 비용과 품질의 견고한 균형으로 처리합니다.",
       },
       {
-        name: "Sirius 3",
+        name: "Sirius X",
         tier: "가장 강력함",
         body: "추론과 여러 단계의 흐름용으로, 작업에 정말 필요할 때만 호출됩니다.",
       },

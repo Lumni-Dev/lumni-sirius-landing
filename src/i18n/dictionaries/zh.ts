@@ -72,17 +72,17 @@ const zh: Dictionary = {
     ariaList: "Sirius 模型",
     items: [
       {
-        name: "Sirius 1",
+        name: "Sirius A",
         tier: "快速",
         body: "用于聊天和轻量任务。回复简短、便宜，无需等待。",
       },
       {
-        name: "Sirius 2",
+        name: "Sirius B",
         tier: "均衡",
         body: "日常默认选择：文件、终端、数据与文档，在成本与质量之间保持稳健平衡。",
       },
       {
-        name: "Sirius 3",
+        name: "Sirius X",
         tier: "最强能力",
         body: "用于推理和多步骤流程，仅在任务确实需要时才调用。",
       },

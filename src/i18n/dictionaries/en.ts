@@ -72,17 +72,17 @@ const en: Dictionary = {
     ariaList: "Sirius models",
     items: [
       {
-        name: "Sirius 1",
+        name: "Sirius A",
         tier: "Fast",
         body: "For chat and light tasks. Short, cheap replies with no wait.",
       },
       {
-        name: "Sirius 2",
+        name: "Sirius B",
         tier: "Balanced",
         body: "The everyday default: files, terminal, data and documents, with a solid balance of cost and quality.",
       },
       {
-        name: "Sirius 3",
+        name: "Sirius X",
         tier: "Most capable",
         body: "For reasoning and many-step flows, called only when the task truly needs it.",
       },
