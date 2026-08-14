@@ -784,18 +784,17 @@
       glow.visible = gop > 0.002;
     }
 
-    // Núcleo + raios de difração: cintilam rápido e sutil (como uma estrela
-    // de verdade tremula no céu) e se abrem quando o Sirius fala.
+    // Núcleo + raios de difração: brilho estável (a cintilação rápida foi
+    // removida; fica só a respiração lenta) e se abrem quando o Sirius fala.
     if (raysA) {
-      const flick = 0.82 + 0.1 * Math.sin(t * 6.7) + 0.08 * Math.sin(t * 11.3 + 1.7);
       const rs = 3.5 + audioSmooth * 2.4 + Math.sin(t * 1.3) * 0.16;
       raysA.scale.set(rs, rs, 1);
       raysA.material.rotation = Math.sin(t * 0.21) * 0.16;
-      raysA.material.opacity = (0.26 + audioSmooth * 0.45) * flick;
+      raysA.material.opacity = 0.26 + audioSmooth * 0.45;
       const rs2 = rs * 0.6;
       raysB.scale.set(rs2, rs2, 1);
       raysB.material.rotation = Math.PI / 4 - Math.sin(t * 0.17 + 2.0) * 0.22;
-      raysB.material.opacity = (0.12 + audioSmooth * 0.32) * flick;
+      raysB.material.opacity = 0.12 + audioSmooth * 0.32;
       const cs = 1.0 + audioSmooth * 0.65;
       coreGlow.scale.set(cs, cs, 1);
       coreGlow.material.opacity = 0.45 + 0.18 * Math.sin(t * 1.3) + audioSmooth * 0.3;
