@@ -1,6 +1,9 @@
-import type { Dictionary } from "@/i18n/types";
+/** Todo o texto do site, em português. (As traduções foram removidas; se um dia
+ * voltarem, este arquivo vira o dicionário base de novo.) */
 
-const pt: Dictionary = {
+export const SITE_URL = "https://sirius.lumni.dev.br";
+
+export const content = {
   meta: {
     title: "Sirius - Seu agente de IA local para Windows",
     description:
@@ -12,7 +15,6 @@ const pt: Dictionary = {
     principles: "Princípios",
     download: "Em breve",
     ariaPrimary: "Principal",
-    language: "Idioma",
   },
   hero: {
     brand: "Sirius",
@@ -113,7 +115,6 @@ const pt: Dictionary = {
     brand: "Sirius",
     lead: "Instale no Windows. Abra. Peça ajuda.",
     button: "Em breve",
-    mailSubject: "Download do Sirius",
   },
   footer: {
     companyDescription:
@@ -136,6 +137,4 @@ const pt: Dictionary = {
     privacyHref: "https://lumni.dev.br/privacy",
     termsHref: "https://lumni.dev.br/terms",
   },
-};
-
-export default pt;
+} as const;

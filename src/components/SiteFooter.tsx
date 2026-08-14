@@ -1,8 +1,7 @@
 import Image from "next/image";
 
 import { TopLink } from "@/components/TopLink";
-import { toLocaleCode, type LocaleCode } from "@/i18n/config";
-import { getDictionary } from "@/i18n/dictionaries";
+import { content } from "@/content";
 
 const YEAR = new Date().getFullYear();
 
@@ -32,14 +31,9 @@ function EmailIcon() {
   );
 }
 
-interface SiteFooterProps {
-  locale: LocaleCode | string;
-}
-
 /** Rodapé espelhado do lumni-landing (`SiteFooter`). */
-export function SiteFooter({ locale }: SiteFooterProps) {
-  const code = toLocaleCode(String(locale));
-  const dict = getDictionary(code);
+export function SiteFooter() {
+  const dict = content;
   const copyright = `© 2024 - ${YEAR} Lumni. ${dict.footer.rights}`;
 
   return (

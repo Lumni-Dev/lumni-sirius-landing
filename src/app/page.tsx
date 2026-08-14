@@ -1,19 +1,10 @@
-import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { SiriusOrb } from "@/components/SiriusOrb";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Starfield } from "@/components/Starfield";
 import { TopLink } from "@/components/TopLink";
-import { toLocaleCode } from "@/i18n/config";
-import { getDictionary } from "@/i18n/dictionaries";
+import { content } from "@/content";
 
-interface HomePageProps {
-  params: Promise<{ locale: string }>;
-}
-
-export default async function HomePage({ params }: HomePageProps) {
-  const locale = toLocaleCode((await params).locale);
-  const dict = getDictionary(locale);
-
+export default function HomePage() {
   return (
     <>
       <div className="backdrop" aria-hidden="true">
@@ -28,25 +19,24 @@ export default async function HomePage({ params }: HomePageProps) {
           <div className="nav-inner">
             <TopLink className="brand">Sirius</TopLink>
             <div className="nav-end">
-              <nav aria-label={dict.nav.ariaPrimary}>
+              <nav aria-label={content.nav.ariaPrimary}>
                 <ul className="nav-links">
                   <li>
-                    <a href="#features">{dict.nav.features}</a>
+                    <a href="#features">{content.nav.features}</a>
                   </li>
                   <li>
-                    <a href="#models">{dict.nav.models}</a>
+                    <a href="#models">{content.nav.models}</a>
                   </li>
                   <li>
-                    <a href="#principles">{dict.nav.principles}</a>
+                    <a href="#principles">{content.nav.principles}</a>
                   </li>
                   <li>
                     <span className="btn btn-ghost btn-sm btn-soon" aria-disabled="true">
-                      {dict.nav.download}
+                      {content.nav.download}
                     </span>
                   </li>
                 </ul>
               </nav>
-              <LanguageSwitcher current={locale} ariaLabel={dict.nav.language} />
             </div>
           </div>
         </header>
@@ -59,19 +49,19 @@ export default async function HomePage({ params }: HomePageProps) {
 
             <div className="hero-copy">
               <p className="hero-brand" id="hero-brand">
-                {dict.hero.brand}
+                {content.hero.brand}
               </p>
               <h1>
-                {dict.hero.title}
-                <span className="hero-break">{dict.hero.titleMuted}</span>
+                {content.hero.title}
+                <span className="hero-break">{content.hero.titleMuted}</span>
               </h1>
-              <p className="hero-lead">{dict.hero.lead}</p>
+              <p className="hero-lead">{content.hero.lead}</p>
               <div className="hero-cta">
                 <span className="btn btn-primary btn-soon" aria-disabled="true">
-                  {dict.hero.ctaPrimary}
+                  {content.hero.ctaPrimary}
                 </span>
                 <a className="btn btn-ghost" href="#features">
-                  {dict.hero.ctaSecondary}
+                  {content.hero.ctaSecondary}
                 </a>
               </div>
             </div>
@@ -79,13 +69,13 @@ export default async function HomePage({ params }: HomePageProps) {
 
           <section className="section" id="features" aria-labelledby="features-title">
             <div className="section-head">
-              <p className="section-kicker">{dict.features.kicker}</p>
-              <h2 id="features-title">{dict.features.title}</h2>
-              <p className="section-lead">{dict.features.lead}</p>
+              <p className="section-kicker">{content.features.kicker}</p>
+              <h2 id="features-title">{content.features.title}</h2>
+              <p className="section-lead">{content.features.lead}</p>
             </div>
 
             <ol className="orbit-list">
-              {dict.features.items.map((f) => (
+              {content.features.items.map((f) => (
                 <li className="orbit-item" key={f.n}>
                   <span className="orbit-index" aria-hidden="true">
                     {f.n}
@@ -102,13 +92,13 @@ export default async function HomePage({ params }: HomePageProps) {
 
           <section className="section" id="models" aria-labelledby="models-title">
             <div className="section-head">
-              <p className="section-kicker">{dict.models.kicker}</p>
-              <h2 id="models-title">{dict.models.title}</h2>
-              <p className="section-lead">{dict.models.lead}</p>
+              <p className="section-kicker">{content.models.kicker}</p>
+              <h2 id="models-title">{content.models.title}</h2>
+              <p className="section-lead">{content.models.lead}</p>
             </div>
 
-            <div className="principles" aria-label={dict.models.ariaList}>
-              {dict.models.items.map((m) => (
+            <div className="principles" aria-label={content.models.ariaList}>
+              {content.models.items.map((m) => (
                 <article className="principle" key={m.name}>
                   <p className="principle-kicker">{m.tier}</p>
                   <h3>{m.name}</h3>
@@ -124,12 +114,12 @@ export default async function HomePage({ params }: HomePageProps) {
             aria-labelledby="principles-title"
           >
             <div className="section-head">
-              <p className="section-kicker">{dict.principles.kicker}</p>
-              <h2 id="principles-title">{dict.principles.title}</h2>
+              <p className="section-kicker">{content.principles.kicker}</p>
+              <h2 id="principles-title">{content.principles.title}</h2>
             </div>
 
             <div className="principles">
-              {dict.principles.items.map((item) => (
+              {content.principles.items.map((item) => (
                 <article className="principle" key={item.title}>
                   <p className="principle-kicker">{item.kicker}</p>
                   <h3>{item.title}</h3>
@@ -141,18 +131,18 @@ export default async function HomePage({ params }: HomePageProps) {
 
           <section className="cta-band" id="download" aria-labelledby="download-title">
             <p className="word" id="download-title">
-              {dict.cta.brand}
+              {content.cta.brand}
             </p>
-            <p className="cta-lead">{dict.cta.lead}</p>
+            <p className="cta-lead">{content.cta.lead}</p>
             <div className="hero-cta">
               <span className="btn btn-primary btn-soon" aria-disabled="true">
-                {dict.cta.button}
+                {content.cta.button}
               </span>
             </div>
           </section>
         </main>
 
-        <SiteFooter locale={locale} />
+        <SiteFooter />
       </div>
     </>
   );
