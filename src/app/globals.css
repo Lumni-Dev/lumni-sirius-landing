@@ -464,6 +464,18 @@ a.btn {
   gap: 10px;
 }
 
+/* CTA da seção da extensão: botão "em breve" com a nota discreta ao lado. */
+.extension-cta {
+  align-items: center;
+  margin-top: 28px;
+}
+
+.extension-note {
+  margin: 0;
+  color: var(--text-faint);
+  font-size: 13px;
+}
+
 /* ---- sections ---- */
 .section {
   width: var(--col);

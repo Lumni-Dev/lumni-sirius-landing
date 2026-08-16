@@ -31,6 +31,9 @@ export default function HomePage() {
                     <a href="#principles">{content.nav.principles}</a>
                   </li>
                   <li>
+                    <a href="#extensao">{content.nav.extension}</a>
+                  </li>
+                  <li>
                     <span className="btn btn-ghost btn-sm btn-soon" aria-disabled="true">
                       {content.nav.download}
                     </span>
@@ -126,6 +129,31 @@ export default function HomePage() {
                   <p>{item.body}</p>
                 </article>
               ))}
+            </div>
+          </section>
+
+          <section className="section" id="extensao" aria-labelledby="extension-title">
+            <div className="section-head">
+              <p className="section-kicker">{content.extension.kicker}</p>
+              <h2 id="extension-title">{content.extension.title}</h2>
+              <p className="section-lead">{content.extension.lead}</p>
+            </div>
+
+            <div className="principles">
+              {content.extension.items.map((item) => (
+                <article className="principle" key={item.title}>
+                  <p className="principle-kicker">{item.kicker}</p>
+                  <h3>{item.title}</h3>
+                  <p>{item.body}</p>
+                </article>
+              ))}
+            </div>
+
+            <div className="hero-cta extension-cta">
+              <span className="btn btn-primary btn-soon" aria-disabled="true">
+                {content.extension.button}
+              </span>
+              <p className="extension-note">{content.extension.note}</p>
             </div>
           </section>
 

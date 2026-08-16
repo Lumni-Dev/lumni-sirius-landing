@@ -13,6 +13,7 @@ export const content = {
     features: "Recursos",
     models: "Modelos",
     principles: "Princípios",
+    extension: "Extensão",
     download: "Em breve",
     ariaPrimary: "Principal",
   },
@@ -110,6 +111,30 @@ export const content = {
         body: "Interface limpa com Space Grotesk. O desktop permanece focado, não um dashboard lotado.",
       },
     ],
+  },
+  extension: {
+    kicker: "Extensão",
+    title: "Sirius também no seu navegador.",
+    lead: "A Sirius Extension conecta o app ao Chrome. Com o modo navegador ligado, o Sirius navega, lê, clica e digita por você, sempre sob a sua permissão.",
+    items: [
+      {
+        kicker: "01 · Comando",
+        title: "Você pede, ele executa",
+        body: "Peça no chat e acompanhe: abrir sites, pesquisar, preencher e ler páginas, um passo de cada vez, com você vendo tudo.",
+      },
+      {
+        kicker: "02 · Controle",
+        title: "Liga e desliga num botão",
+        body: "A extensão só conecta enquanto o modo navegador está ligado no app. Desligou, desconectou na hora.",
+      },
+      {
+        kicker: "03 · Local",
+        title: "Nada sai pela extensão",
+        body: "Ela conversa apenas com o app Sirius no seu próprio PC. Sem servidores externos, sem análise de dados, sem anúncios.",
+      },
+    ],
+    button: "Em breve na Chrome Web Store",
+    note: "Gratuita. Requer o app Sirius para Windows.",
   },
   cta: {
     brand: "Sirius",
