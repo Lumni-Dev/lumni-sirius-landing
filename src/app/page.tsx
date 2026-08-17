@@ -34,6 +34,9 @@ export default function HomePage() {
                     <a href="#extensao">{content.nav.extension}</a>
                   </li>
                   <li>
+                    <a href="#dashboard">{content.nav.dashboard}</a>
+                  </li>
+                  <li>
                     <span className="btn btn-ghost btn-sm btn-soon" aria-disabled="true">
                       {content.nav.download}
                     </span>
@@ -154,6 +157,46 @@ export default function HomePage() {
                 {content.extension.button}
               </span>
               <p className="extension-note">{content.extension.note}</p>
+            </div>
+          </section>
+
+          <section className="section" id="dashboard" aria-labelledby="dashboard-title">
+            <div className="section-head">
+              <p className="section-kicker">{content.dashboard.kicker}</p>
+              <h2 id="dashboard-title">{content.dashboard.title}</h2>
+              <p className="section-lead">{content.dashboard.lead}</p>
+            </div>
+
+            <div className="dash-showcase">
+              <span className="dash-glow" aria-hidden="true" />
+              <div className="dash-window">
+                <div className="dash-bar">
+                  <span className="dash-dots" aria-hidden="true">
+                    <i />
+                    <i />
+                    <i />
+                  </span>
+                  <span className="dash-url">{content.dashboard.url}</span>
+                </div>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/dashboard-analytics.png"
+                  alt={content.dashboard.imageAlt}
+                  width={1130}
+                  height={588}
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            <div className="principles dash-points">
+              {content.dashboard.items.map((item) => (
+                <article className="principle" key={item.title}>
+                  <p className="principle-kicker">{item.kicker}</p>
+                  <h3>{item.title}</h3>
+                  <p>{item.body}</p>
+                </article>
+              ))}
             </div>
           </section>
 

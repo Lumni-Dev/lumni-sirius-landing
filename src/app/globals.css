@@ -605,6 +605,81 @@ a.btn {
   max-width: 32ch;
 }
 
+/* ---- dashboard showcase ---- */
+.dash-showcase {
+  position: relative;
+  margin: clamp(28px, 5vw, 44px) 0 clamp(36px, 6vw, 56px);
+}
+
+.dash-glow {
+  position: absolute;
+  inset: -8% 4% auto 4%;
+  height: 70%;
+  background: radial-gradient(
+    ellipse 60% 100% at 50% 0%,
+    rgba(255, 255, 255, 0.06),
+    transparent 72%
+  );
+  filter: blur(30px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.dash-window {
+  position: relative;
+  z-index: 1;
+  border: 1px solid var(--hairline-strong);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--bg-elevated);
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.55),
+    0 2px 10px rgba(0, 0, 0, 0.45);
+}
+
+.dash-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 16px;
+  border-bottom: 1px solid var(--hairline);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.dash-dots {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.dash-dots i {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--text-faint);
+  opacity: 0.5;
+}
+
+.dash-url {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 11.5px;
+  letter-spacing: 0.02em;
+  color: var(--text-faint);
+  padding: 3px 12px;
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.dash-window img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.dash-points {
+  margin-top: clamp(28px, 4.5vw, 44px);
+}
+
 /* ---- CTA ---- */
 .cta-band {
   width: var(--col);

@@ -14,6 +14,7 @@ export const content = {
     models: "Modelos",
     principles: "Princípios",
     extension: "Extensão",
+    dashboard: "Dashboard",
     download: "Em breve",
     ariaPrimary: "Principal",
   },
@@ -135,6 +136,31 @@ export const content = {
     ],
     button: "Em breve na Chrome Web Store",
     note: "Gratuita. Requer o app Sirius para Windows.",
+  },
+  dashboard: {
+    kicker: "Dashboard",
+    title: "Suas métricas de uso, num painel.",
+    lead: "Um dashboard analítico na web para acompanhar o seu uso do Sirius: requisições, tokens, latência, modelos, esforço e personalidades, com login pela mesma conta Google do app.",
+    url: "dashboard.lumni.dev.br",
+    imageAlt:
+      "Sirius Dashboard: cartões de métricas de uso — requisições, tokens, latência — e gráficos.",
+    items: [
+      {
+        kicker: "01 · Métricas",
+        title: "Tudo que importa, agregado",
+        body: "Requisições, tokens de entrada e saída, latência p50/p95, distribuição por modelo, esforço e personalidade, e um mapa de horários de uso.",
+      },
+      {
+        kicker: "02 · Login Google",
+        title: "A sua conta, os seus dados",
+        body: "Entre com a mesma conta Google do Sirius e veja apenas as suas métricas. Sem gerenciar senha nem banco de dados.",
+      },
+      {
+        kicker: "03 · Privado",
+        title: "Somente leitura, sem conversas",
+        body: "O painel só lê métricas agregadas pelo próprio Sirius. Nenhum conteúdo das suas conversas é exibido.",
+      },
+    ],
   },
   cta: {
     brand: "Sirius",
