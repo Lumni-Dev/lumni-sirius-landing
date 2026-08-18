@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { JetBrains_Mono, Orbitron, Space_Grotesk } from "next/font/google";
 
 import { EnsureScrollTop } from "@/components/EnsureScrollTop";
+import { LockPage } from "@/components/LockPage";
 import { content, SITE_URL } from "@/content";
 import "@/app/globals.css";
 
@@ -61,6 +62,7 @@ export default function RootLayout({
     >
       <body>
         <EnsureScrollTop />
+        <LockPage />
         {children}
       </body>
     </html>

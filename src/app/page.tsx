@@ -161,7 +161,6 @@ export default function HomePage() {
               >
                 {content.extension.button}
               </a>
-              <p className="extension-note">{content.extension.note}</p>
             </div>
           </section>
 

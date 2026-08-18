@@ -45,6 +45,12 @@ body {
   /* clip (não hidden): overflow-x:hidden força overflow-y:auto e corta a onda. */
   overflow-x: clip;
   overflow-y: visible;
+  /* Página sem seleção de texto nem callout (botão direito é bloqueado via JS). */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
 }
 
 html[lang="ja"] body,
@@ -468,12 +474,6 @@ a.btn {
 .extension-cta {
   align-items: center;
   margin-top: 28px;
-}
-
-.extension-note {
-  margin: 0;
-  color: var(--text-faint);
-  font-size: 13px;
 }
 
 /* ---- sections ---- */

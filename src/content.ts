@@ -137,7 +137,6 @@ export const content = {
     button: "Instalar na Chrome Web Store",
     buttonHref:
       "https://chromewebstore.google.com/detail/pbcofjcmmjnigebanbjeaaidanljamaf",
-    note: "Gratuita. Requer o app Sirius para Windows.",
   },
   dashboard: {
     kicker: "Dashboard",
