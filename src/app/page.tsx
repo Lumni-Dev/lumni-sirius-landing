@@ -202,6 +202,17 @@ export default function HomePage() {
                 </article>
               ))}
             </div>
+
+            <div className="hero-cta dash-cta">
+              <a
+                className="btn btn-primary"
+                href={content.dashboard.buttonHref}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {content.dashboard.button}
+              </a>
+            </div>
           </section>
 
           <section className="cta-band" id="download" aria-labelledby="download-title">

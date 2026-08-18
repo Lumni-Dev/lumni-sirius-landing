@@ -143,6 +143,8 @@ export const content = {
     title: "Suas métricas de uso, num painel.",
     lead: "Um dashboard analítico na web para acompanhar o seu uso do Sirius: requisições, tokens, latência, níveis, esforço e personalidades, com login pela mesma conta Google do app.",
     url: "dashboard.lumni.dev.br",
+    button: "Abrir o dashboard",
+    buttonHref: "https://dashboard.lumni.dev.br",
     imageAlt:
       "Sirius Dashboard: cartões de métricas de uso — requisições, tokens, latência — e gráficos.",
     items: [

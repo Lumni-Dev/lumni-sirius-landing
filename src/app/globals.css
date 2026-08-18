@@ -680,6 +680,12 @@ a.btn {
   margin-top: clamp(28px, 4.5vw, 44px);
 }
 
+/* CTA da seção do dashboard: leva ao painel na web. */
+.dash-cta {
+  align-items: center;
+  margin-top: 28px;
+}
+
 /* ---- CTA ---- */
 .cta-band {
   width: var(--col);
