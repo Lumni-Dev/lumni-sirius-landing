@@ -7,11 +7,11 @@ export const content = {
   meta: {
     title: "Sirius - Seu agente de IA local para Windows",
     description:
-      "Sirius é um agente de IA para desktop que roda no seu PC. Três modelos Sirius, 940 ferramentas MCP e aprovação de cada ação, no seu PC e sob o seu controle.",
+      "Sirius é um agente de IA para desktop que roda no seu PC. Um só modelo que se adapta sozinho, 940 ferramentas MCP e aprovação de cada ação, no seu PC e sob o seu controle.",
   },
   nav: {
     features: "Recursos",
-    models: "Modelos",
+    models: "Modelo",
     principles: "Princípios",
     extension: "Extensão",
     dashboard: "Dashboard",
@@ -35,7 +35,7 @@ export const content = {
         n: "01",
         label: "Agente",
         title: "IA local no seu PC",
-        body: "Três modelos Sirius rodam na sua máquina e são escolhidos automaticamente conforme a tarefa. Você pede, o Sirius resolve.",
+        body: "O Sirius roda na sua máquina e se adapta automaticamente a cada tarefa. Você pede, o Sirius resolve.",
       },
       {
         n: "02",
@@ -64,31 +64,31 @@ export const content = {
       {
         n: "06",
         label: "Controle",
-        title: "Esforço, permissões, Auto",
-        body: "Escolha esforço e permissão por turno, ou deixe o Auto escolher o modelo mais barato que ainda resolve.",
+        title: "Permissões e Auto",
+        body: "Você define a permissão por turno; o Sirius escolhe sozinho o esforço e o caminho mais barato que ainda resolve.",
       },
     ],
   },
   models: {
-    kicker: "Modelos",
-    title: "Três modelos, um só assistente.",
-    lead: "O Sirius escolhe o modelo certo para cada pedido. Você não gerencia modelo nenhum, só pede.",
-    ariaList: "Modelos do Sirius",
+    kicker: "Modelo",
+    title: "Um só modelo. O Sirius.",
+    lead: "O Sirius escolhe sozinho a profundidade certa para cada pedido. Você não gerencia modelo nenhum, só pede.",
+    ariaList: "Como o Sirius se adapta",
     items: [
       {
-        name: "Sirius A",
-        tier: "Rápido",
-        body: "Para conversa e tarefas leves. Respostas curtas e baratas, sem espera.",
+        name: "Rápido quando dá",
+        tier: "Leve",
+        body: "Conversa e tarefas leves ganham respostas curtas e baratas, sem espera.",
       },
       {
-        name: "Sirius B",
-        tier: "Equilibrado",
-        body: "O padrão do dia a dia: arquivos, terminal, dados e documentos, com boa relação entre custo e qualidade.",
+        name: "Profundo quando precisa",
+        tier: "Pesado",
+        body: "Raciocínio e fluxos com muitos passos acionam mais capacidade, só quando a tarefa realmente pede.",
       },
       {
-        name: "Sirius X",
-        tier: "Mais capaz",
-        body: "Para raciocínio e fluxos com muitos passos, acionado só quando a tarefa realmente pede.",
+        name: "Você não gerencia",
+        tier: "Automático",
+        body: "Nada de escolher modelo ou esforço: o Sirius decide sozinho o melhor caminho a cada pedido.",
       },
     ],
   },
@@ -104,7 +104,7 @@ export const content = {
       {
         kicker: "02 · Esforço",
         title: "Gaste só o necessário",
-        body: "Esforço, permissões e o roteamento Auto escolhem o caminho mais barato que ainda entrega o resultado.",
+        body: "O Sirius escolhe sozinho o esforço e o caminho mais barato que ainda entrega o resultado; você só define as permissões.",
       },
       {
         kicker: "03 · Foco",
