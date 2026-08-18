@@ -153,9 +153,14 @@ export default function HomePage() {
             </div>
 
             <div className="hero-cta extension-cta">
-              <span className="btn btn-primary btn-soon" aria-disabled="true">
+              <a
+                className="btn btn-primary"
+                href={content.extension.buttonHref}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {content.extension.button}
-              </span>
+              </a>
               <p className="extension-note">{content.extension.note}</p>
             </div>
           </section>

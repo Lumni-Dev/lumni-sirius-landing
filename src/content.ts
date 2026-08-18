@@ -134,7 +134,9 @@ export const content = {
         body: "Ela conversa apenas com o app Sirius no seu próprio PC. Sem servidores externos, sem análise de dados, sem anúncios.",
       },
     ],
-    button: "Em breve na Chrome Web Store",
+    button: "Instalar na Chrome Web Store",
+    buttonHref:
+      "https://chromewebstore.google.com/detail/pbcofjcmmjnigebanbjeaaidanljamaf",
     note: "Gratuita. Requer o app Sirius para Windows.",
   },
   dashboard: {
