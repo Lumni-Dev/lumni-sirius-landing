@@ -7,7 +7,7 @@ export const content = {
   meta: {
     title: "Sirius - Seu agente de IA local para Windows",
     description:
-      "Sirius é um agente de IA para desktop que roda no seu PC. Um só modelo que se adapta sozinho, 940 ferramentas MCP e aprovação de cada ação, no seu PC e sob o seu controle.",
+      "Sirius é um agente de IA para desktop que roda no seu PC. Um só modelo que se adapta sozinho, age na sua máquina e pede aprovação a cada ação, sob o seu controle.",
   },
   nav: {
     features: "Recursos",
@@ -22,14 +22,14 @@ export const content = {
     brand: "Sirius",
     title: "Seu agente de IA local",
     titleMuted: " para Windows.",
-    lead: "Um agente desktop para Windows que programa, edita arquivos e organiza o seu trabalho com 940 ferramentas nativas, direto na sua máquina.",
+    lead: "Um agente desktop para Windows que programa, edita arquivos e organiza o seu trabalho direto na sua máquina, sempre sob a sua permissão.",
     ctaPrimary: "Em breve",
     ctaSecondary: "Ver capacidades",
   },
   features: {
     kicker: "Capacidades",
     title: "O que o Sirius traz para a sua mesa.",
-    lead: "Uma composição para o trabalho: chat, ferramentas e integrações, sem transformar o desktop numa colagem de painéis.",
+    lead: "Uma composição para o trabalho: chat, ações e integrações, sem transformar o desktop numa colagem de painéis.",
     items: [
       {
         n: "01",
@@ -39,15 +39,15 @@ export const content = {
       },
       {
         n: "02",
-        label: "Ferramentas",
-        title: "940 ferramentas MCP",
-        body: "48 famílias, de arquivos e git a bancos de dados, Office, imagens e PDFs, selecionadas por embeddings a cada pedido.",
+        label: "Ações",
+        title: "Faz, não só responde",
+        body: "O Sirius não para na conversa: mexe em arquivos, executa tarefas e busca o que você precisa na sua própria máquina para resolver o pedido.",
       },
       {
         n: "03",
-        label: "Skills",
-        title: "Skills e subagentes",
-        body: "Salve /comandos e agentes especialistas. Eles ativam quando a mensagem combina, sem configurar nada.",
+        label: "Personas",
+        title: "Personalidades sob medida",
+        body: "Crie personas com instruções próprias e troque o jeito do Sirius responder quando quiser.",
       },
       {
         n: "04",
